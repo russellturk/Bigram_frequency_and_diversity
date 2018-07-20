@@ -1,7 +1,7 @@
 Copyright 2018 Russell Turk
 
-This project contains code and text. The code is distributed according to GPL 3, see below. The
-documents are distributed according to Creative Commons Attribution-ShareAlike
+This project contains code and data. The code is distributed according to GPL 3, see below. Any
+documents and data are distributed according to Creative Commons Attribution-ShareAlike
 4.0 International Public License, see below.  
 
 License for code
