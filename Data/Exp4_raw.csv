@@ -1,4 +1,4 @@
-age,bigram_frequency,concreteness,correct,diversity,freq,initial,letters,response_time,sex,subject_nr,item,trans_prob
+age,bigram_frequency,concreteness,correct,diversity,word_freq,initial,letters,response_time,sex,subject_nr,item,trans_prob
 20,28,2.38,1,19,30410,scarcely,4,413,1,1,able,0.007159905
 20,0,2.71,1,0,3597,opulent,5,422,1,1,abuse,0
 20,0,2.86,1,0,21857,jink,3,428,1,1,age,0
