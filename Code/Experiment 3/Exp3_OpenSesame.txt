@@ -1,0 +1,4972 @@
+---
+API: 2
+Description: A simple word/ nonword categorization
+OpenSesame: 3.1.7
+Platform: nt
+Title: Lexical-decision task
+---
+set width 1024
+set uniform_coordinates no
+set title "Lexical decision task"
+set synth_backend legacy
+set subject_parity even
+set subject_nr 0
+set start experiment
+set sound_sample_size -16
+set sound_freq 48000
+set sound_channels 2
+set sound_buf_size 1024
+set sampler_backend legacy
+set round_decimals 2
+set mouse_backend xpyriment
+set keyboard_backend legacy
+set height 768
+set fullscreen no
+set form_clicks no
+set foreground "#000000"
+set font_underline no
+set font_size 32
+set font_italic no
+set font_family mono
+set font_bold no
+set experiment_path "C:\\Users\\russe\\Desktop\\Experiments\\Exp7"
+set disable_garbage_collection yes
+set description "Statistical priming experiment"
+set coordinates relative
+set compensation 0
+set color_backend legacy
+set clock_backend legacy
+set canvas_backend xpyriment
+set bidi no
+set background "#f3f3f3"
+
+define sketchpad block_end
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="This block has now finished.<br />Press any key to continue." x=0 y=0 z_index=0
+
+define loop block_loop_1
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence_1
+	set description "A single block of trials"
+	set cycles 90
+	set continuous no
+	set column_order "initial;trailing;concreteness;pos;syllables;phonemes;letters;freq;bigram_freq;w_nw;group;correct_response"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 bigram_freq ""
+	setcycle 0 concreteness ""
+	setcycle 0 correct_response "[nonword_response]"
+	setcycle 0 freq 0
+	setcycle 0 group 0
+	setcycle 0 initial fell
+	setcycle 0 letters ""
+	setcycle 0 phonemes ""
+	setcycle 0 pos ""
+	setcycle 0 syllables ""
+	setcycle 0 trailing biewed
+	setcycle 0 w_nw n
+	setcycle 1 bigram_freq ""
+	setcycle 1 concreteness ""
+	setcycle 1 correct_response "[nonword_response]"
+	setcycle 1 freq 0
+	setcycle 1 group 0
+	setcycle 1 initial theses
+	setcycle 1 letters ""
+	setcycle 1 phonemes ""
+	setcycle 1 pos ""
+	setcycle 1 syllables ""
+	setcycle 1 trailing blole
+	setcycle 1 w_nw n
+	setcycle 2 bigram_freq ""
+	setcycle 2 concreteness ""
+	setcycle 2 correct_response "[nonword_response]"
+	setcycle 2 freq 0
+	setcycle 2 group 0
+	setcycle 2 initial screen
+	setcycle 2 letters ""
+	setcycle 2 phonemes ""
+	setcycle 2 pos ""
+	setcycle 2 syllables ""
+	setcycle 2 trailing blowns
+	setcycle 2 w_nw n
+	setcycle 3 bigram_freq ""
+	setcycle 3 concreteness ""
+	setcycle 3 correct_response "[nonword_response]"
+	setcycle 3 freq 0
+	setcycle 3 group 0
+	setcycle 3 initial must
+	setcycle 3 letters ""
+	setcycle 3 phonemes ""
+	setcycle 3 pos ""
+	setcycle 3 syllables ""
+	setcycle 3 trailing blult
+	setcycle 3 w_nw n
+	setcycle 4 bigram_freq ""
+	setcycle 4 concreteness ""
+	setcycle 4 correct_response "[nonword_response]"
+	setcycle 4 freq 0
+	setcycle 4 group 0
+	setcycle 4 initial median
+	setcycle 4 letters ""
+	setcycle 4 phonemes ""
+	setcycle 4 pos ""
+	setcycle 4 syllables ""
+	setcycle 4 trailing blurled
+	setcycle 4 w_nw n
+	setcycle 5 bigram_freq ""
+	setcycle 5 concreteness ""
+	setcycle 5 correct_response "[nonword_response]"
+	setcycle 5 freq 0
+	setcycle 5 group 0
+	setcycle 5 initial while
+	setcycle 5 letters ""
+	setcycle 5 phonemes ""
+	setcycle 5 pos ""
+	setcycle 5 syllables ""
+	setcycle 5 trailing blypts
+	setcycle 5 w_nw n
+	setcycle 6 bigram_freq ""
+	setcycle 6 concreteness ""
+	setcycle 6 correct_response "[nonword_response]"
+	setcycle 6 freq 0
+	setcycle 6 group 0
+	setcycle 6 initial which
+	setcycle 6 letters ""
+	setcycle 6 phonemes ""
+	setcycle 6 pos ""
+	setcycle 6 syllables ""
+	setcycle 6 trailing bown
+	setcycle 6 w_nw n
+	setcycle 7 bigram_freq ""
+	setcycle 7 concreteness ""
+	setcycle 7 correct_response "[nonword_response]"
+	setcycle 7 freq 0
+	setcycle 7 group 0
+	setcycle 7 initial column
+	setcycle 7 letters ""
+	setcycle 7 phonemes ""
+	setcycle 7 pos ""
+	setcycle 7 syllables ""
+	setcycle 7 trailing brounced
+	setcycle 7 w_nw n
+	setcycle 8 bigram_freq ""
+	setcycle 8 concreteness ""
+	setcycle 8 correct_response "[nonword_response]"
+	setcycle 8 freq 0
+	setcycle 8 group 0
+	setcycle 8 initial then
+	setcycle 8 letters ""
+	setcycle 8 phonemes ""
+	setcycle 8 pos ""
+	setcycle 8 syllables ""
+	setcycle 8 trailing cack
+	setcycle 8 w_nw n
+	setcycle 9 bigram_freq ""
+	setcycle 9 concreteness ""
+	setcycle 9 correct_response "[nonword_response]"
+	setcycle 9 freq 0
+	setcycle 9 group 0
+	setcycle 9 initial mark
+	setcycle 9 letters ""
+	setcycle 9 phonemes ""
+	setcycle 9 pos ""
+	setcycle 9 syllables ""
+	setcycle 9 trailing chaph
+	setcycle 9 w_nw n
+	setcycle 10 bigram_freq ""
+	setcycle 10 concreteness ""
+	setcycle 10 correct_response "[nonword_response]"
+	setcycle 10 freq 0
+	setcycle 10 group 0
+	setcycle 10 initial wool
+	setcycle 10 letters ""
+	setcycle 10 phonemes ""
+	setcycle 10 pos ""
+	setcycle 10 syllables ""
+	setcycle 10 trailing clarge
+	setcycle 10 w_nw n
+	setcycle 11 bigram_freq ""
+	setcycle 11 concreteness ""
+	setcycle 11 correct_response "[nonword_response]"
+	setcycle 11 freq 0
+	setcycle 11 group 0
+	setcycle 11 initial tape
+	setcycle 11 letters ""
+	setcycle 11 phonemes ""
+	setcycle 11 pos ""
+	setcycle 11 syllables ""
+	setcycle 11 trailing cleeced
+	setcycle 11 w_nw n
+	setcycle 12 bigram_freq ""
+	setcycle 12 concreteness ""
+	setcycle 12 correct_response "[nonword_response]"
+	setcycle 12 freq 0
+	setcycle 12 group 0
+	setcycle 12 initial cheese
+	setcycle 12 letters ""
+	setcycle 12 phonemes ""
+	setcycle 12 pos ""
+	setcycle 12 syllables ""
+	setcycle 12 trailing clett
+	setcycle 12 w_nw n
+	setcycle 13 bigram_freq ""
+	setcycle 13 concreteness ""
+	setcycle 13 correct_response "[nonword_response]"
+	setcycle 13 freq 0
+	setcycle 13 group 0
+	setcycle 13 initial wigan
+	setcycle 13 letters ""
+	setcycle 13 phonemes ""
+	setcycle 13 pos ""
+	setcycle 13 syllables ""
+	setcycle 13 trailing clulched
+	setcycle 13 w_nw n
+	setcycle 14 bigram_freq ""
+	setcycle 14 concreteness ""
+	setcycle 14 correct_response "[nonword_response]"
+	setcycle 14 freq 0
+	setcycle 14 group 0
+	setcycle 14 initial sweden
+	setcycle 14 letters ""
+	setcycle 14 phonemes ""
+	setcycle 14 pos ""
+	setcycle 14 syllables ""
+	setcycle 14 trailing croiced
+	setcycle 14 w_nw n
+	setcycle 15 bigram_freq 0
+	setcycle 15 concreteness 1.77
+	setcycle 15 correct_response "[word_response]"
+	setcycle 15 freq 1971.16
+	setcycle 15 group 1
+	setcycle 15 initial mud
+	setcycle 15 letters 5
+	setcycle 15 phonemes 4
+	setcycle 15 pos Preposition
+	setcycle 15 syllables 2
+	setcycle 15 trailing about
+	setcycle 15 w_nw w
+	setcycle 16 bigram_freq 10
+	setcycle 16 concreteness 1.77
+	setcycle 16 correct_response "[word_response]"
+	setcycle 16 freq 1971.16
+	setcycle 16 group 2
+	setcycle 16 initial second
+	setcycle 16 letters 5
+	setcycle 16 phonemes 4
+	setcycle 16 pos Preposition
+	setcycle 16 syllables 2
+	setcycle 16 trailing about
+	setcycle 16 w_nw w
+	setcycle 17 bigram_freq 5376
+	setcycle 17 concreteness 1.77
+	setcycle 17 correct_response "[word_response]"
+	setcycle 17 freq 1971.16
+	setcycle 17 group 3
+	setcycle 17 initial talking
+	setcycle 17 letters 5
+	setcycle 17 phonemes 4
+	setcycle 17 pos Preposition
+	setcycle 17 syllables 2
+	setcycle 17 trailing about
+	setcycle 17 w_nw w
+	setcycle 18 bigram_freq 0
+	setcycle 18 concreteness 3.08
+	setcycle 18 correct_response "[word_response]"
+	setcycle 18 freq 158.91
+	setcycle 18 group 1
+	setcycle 18 initial house
+	setcycle 18 letters 7
+	setcycle 18 phonemes 5
+	setcycle 18 pos Noun
+	setcycle 18 syllables 2
+	setcycle 18 trailing account
+	setcycle 18 w_nw w
+	setcycle 19 bigram_freq 10
+	setcycle 19 concreteness 3.08
+	setcycle 19 correct_response "[word_response]"
+	setcycle 19 freq 158.91
+	setcycle 19 group 2
+	setcycle 19 initial should
+	setcycle 19 letters 7
+	setcycle 19 phonemes 5
+	setcycle 19 pos Noun
+	setcycle 19 syllables 2
+	setcycle 19 trailing account
+	setcycle 19 w_nw w
+	setcycle 20 bigram_freq 2929
+	setcycle 20 concreteness 3.08
+	setcycle 20 correct_response "[word_response]"
+	setcycle 20 freq 158.91
+	setcycle 20 group 3
+	setcycle 20 initial into
+	setcycle 20 letters 7
+	setcycle 20 phonemes 5
+	setcycle 20 pos Noun
+	setcycle 20 syllables 2
+	setcycle 20 trailing account
+	setcycle 20 w_nw w
+	setcycle 21 bigram_freq 0
+	setcycle 21 concreteness 3.07
+	setcycle 21 correct_response "[word_response]"
+	setcycle 21 freq 252.03
+	setcycle 21 group 1
+	setcycle 21 initial clothes
+	setcycle 21 letters 6
+	setcycle 21 phonemes 5
+	setcycle 21 pos Preposition
+	setcycle 21 syllables 2
+	setcycle 21 trailing across
+	setcycle 21 w_nw w
+	setcycle 22 bigram_freq 10
+	setcycle 22 concreteness 3.07
+	setcycle 22 correct_response "[word_response]"
+	setcycle 22 freq 252.03
+	setcycle 22 group 2
+	setcycle 22 initial headed
+	setcycle 22 letters 6
+	setcycle 22 phonemes 5
+	setcycle 22 pos Preposition
+	setcycle 22 syllables 2
+	setcycle 22 trailing across
+	setcycle 22 w_nw w
+	setcycle 23 bigram_freq 512
+	setcycle 23 concreteness 3.07
+	setcycle 23 correct_response "[word_response]"
+	setcycle 23 freq 252.03
+	setcycle 23 group 3
+	setcycle 23 initial came
+	setcycle 23 letters 6
+	setcycle 23 phonemes 5
+	setcycle 23 pos Preposition
+	setcycle 23 syllables 2
+	setcycle 23 trailing across
+	setcycle 23 w_nw w
+	setcycle 24 bigram_freq 0
+	setcycle 24 concreteness 1.83
+	setcycle 24 correct_response "[word_response]"
+	setcycle 24 freq 49.9
+	setcycle 24 group 1
+	setcycle 24 initial predict
+	setcycle 24 letters 8
+	setcycle 24 phonemes 7
+	setcycle 24 pos Adjective
+	setcycle 24 syllables 2
+	setcycle 24 trailing advanced
+	setcycle 24 w_nw w
+	setcycle 25 bigram_freq 10
+	setcycle 25 concreteness 1.83
+	setcycle 25 correct_response "[word_response]"
+	setcycle 25 freq 49.9
+	setcycle 25 group 2
+	setcycle 25 initial many
+	setcycle 25 letters 8
+	setcycle 25 phonemes 7
+	setcycle 25 pos Adjective
+	setcycle 25 syllables 2
+	setcycle 25 trailing advanced
+	setcycle 25 w_nw w
+	setcycle 26 bigram_freq 384
+	setcycle 26 concreteness 1.83
+	setcycle 26 correct_response "[word_response]"
+	setcycle 26 freq 49.9
+	setcycle 26 group 3
+	setcycle 26 initial more
+	setcycle 26 letters 8
+	setcycle 26 phonemes 7
+	setcycle 26 pos Adjective
+	setcycle 26 syllables 2
+	setcycle 26 trailing advanced
+	setcycle 26 w_nw w
+	setcycle 27 bigram_freq 0
+	setcycle 27 concreteness 2
+	setcycle 27 correct_response "[word_response]"
+	setcycle 27 freq 562.31
+	setcycle 27 group 1
+	setcycle 27 initial hear
+	setcycle 27 letters 5
+	setcycle 27 phonemes 4
+	setcycle 27 pos Adverb
+	setcycle 27 syllables 2
+	setcycle 27 trailing again
+	setcycle 27 w_nw w
+	setcycle 28 bigram_freq 10
+	setcycle 28 concreteness 2
+	setcycle 28 correct_response "[word_response]"
+	setcycle 28 freq 562.31
+	setcycle 28 group 2
+	setcycle 28 initial record
+	setcycle 28 letters 5
+	setcycle 28 phonemes 4
+	setcycle 28 pos Adverb
+	setcycle 28 syllables 2
+	setcycle 28 trailing again
+	setcycle 28 w_nw w
+	setcycle 29 bigram_freq 3577
+	setcycle 29 concreteness 2
+	setcycle 29 correct_response "[word_response]"
+	setcycle 29 freq 562.31
+	setcycle 29 group 3
+	setcycle 29 initial once
+	setcycle 29 letters 5
+	setcycle 29 phonemes 4
+	setcycle 29 pos Adverb
+	setcycle 29 syllables 2
+	setcycle 29 trailing again
+	setcycle 29 w_nw w
+	setcycle 30 bigram_freq 0
+	setcycle 30 concreteness 3.14
+	setcycle 30 correct_response "[word_response]"
+	setcycle 30 freq 47.03
+	setcycle 30 group 1
+	setcycle 30 initial morning
+	setcycle 30 letters 4
+	setcycle 30 phonemes 3
+	setcycle 30 pos Verb
+	setcycle 30 syllables 1
+	setcycle 30 trailing aged
+	setcycle 30 w_nw w
+	setcycle 31 bigram_freq 10
+	setcycle 31 concreteness 3.14
+	setcycle 31 correct_response "[word_response]"
+	setcycle 31 freq 47.03
+	setcycle 31 group 2
+	setcycle 31 initial someone
+	setcycle 31 letters 4
+	setcycle 31 phonemes 3
+	setcycle 31 pos Verb
+	setcycle 31 syllables 1
+	setcycle 31 trailing aged
+	setcycle 31 w_nw w
+	setcycle 32 bigram_freq 309
+	setcycle 32 concreteness 3.14
+	setcycle 32 correct_response "[word_response]"
+	setcycle 32 freq 47.03
+	setcycle 32 group 3
+	setcycle 32 initial those
+	setcycle 32 letters 4
+	setcycle 32 phonemes 4
+	setcycle 32 pos Verb
+	setcycle 32 syllables 2
+	setcycle 32 trailing aged
+	setcycle 32 w_nw w
+	setcycle 33 bigram_freq 0
+	setcycle 33 concreteness 1.93
+	setcycle 33 correct_response "[word_response]"
+	setcycle 33 freq 146.92
+	setcycle 33 group 1
+	setcycle 33 initial friend
+	setcycle 33 letters 6
+	setcycle 33 phonemes 5
+	setcycle 33 pos Verb
+	setcycle 33 syllables 2
+	setcycle 33 trailing agreed
+	setcycle 33 w_nw w
+	setcycle 34 bigram_freq 10
+	setcycle 34 concreteness 1.93
+	setcycle 34 correct_response "[word_response]"
+	setcycle 34 freq 146.92
+	setcycle 34 group 2
+	setcycle 34 initial hereby
+	setcycle 34 letters 6
+	setcycle 34 phonemes 5
+	setcycle 34 pos Verb
+	setcycle 34 syllables 2
+	setcycle 34 trailing agreed
+	setcycle 34 w_nw w
+	setcycle 35 bigram_freq 817
+	setcycle 35 concreteness 1.93
+	setcycle 35 correct_response "[word_response]"
+	setcycle 35 freq 146.92
+	setcycle 35 group 3
+	setcycle 35 initial had
+	setcycle 35 letters 6
+	setcycle 35 phonemes 5
+	setcycle 35 pos Verb
+	setcycle 35 syllables 2
+	setcycle 35 trailing agreed
+	setcycle 35 w_nw w
+	setcycle 36 bigram_freq 0
+	setcycle 36 concreteness 3.1
+	setcycle 36 correct_response "[word_response]"
+	setcycle 36 freq 86.07
+	setcycle 36 group 1
+	setcycle 36 initial theory
+	setcycle 36 letters 3
+	setcycle 36 phonemes 2
+	setcycle 36 pos Noun
+	setcycle 36 syllables 1
+	setcycle 36 trailing aid
+	setcycle 36 w_nw w
+	setcycle 37 bigram_freq 10
+	setcycle 37 concreteness 3.1
+	setcycle 37 correct_response "[word_response]"
+	setcycle 37 freq 86.07
+	setcycle 37 group 2
+	setcycle 37 initial sex
+	setcycle 37 letters 3
+	setcycle 37 phonemes 2
+	setcycle 37 pos Noun
+	setcycle 37 syllables 1
+	setcycle 37 trailing aid
+	setcycle 37 w_nw w
+	setcycle 38 bigram_freq 981
+	setcycle 38 concreteness 3.1
+	setcycle 38 correct_response "[word_response]"
+	setcycle 38 freq 86.07
+	setcycle 38 group 3
+	setcycle 38 initial legal
+	setcycle 38 letters 3
+	setcycle 38 phonemes 2
+	setcycle 38 pos Noun
+	setcycle 38 syllables 1
+	setcycle 38 trailing aid
+	setcycle 38 w_nw w
+	setcycle 39 bigram_freq 0
+	setcycle 39 concreteness 2.86
+	setcycle 39 correct_response "[word_response]"
+	setcycle 39 freq 132.65
+	setcycle 39 group 1
+	setcycle 39 initial mask
+	setcycle 39 letters 5
+	setcycle 39 phonemes 4
+	setcycle 39 pos Adjective
+	setcycle 39 syllables 2
+	setcycle 39 trailing alone
+	setcycle 39 w_nw w
+	setcycle 40 bigram_freq 10
+	setcycle 40 concreteness 2.86
+	setcycle 40 correct_response "[word_response]"
+	setcycle 40 freq 132.65
+	setcycle 40 group 2
+	setcycle 40 initial often
+	setcycle 40 letters 5
+	setcycle 40 phonemes 4
+	setcycle 40 pos Adjective
+	setcycle 40 syllables 2
+	setcycle 40 trailing alone
+	setcycle 40 w_nw w
+	setcycle 41 bigram_freq 410
+	setcycle 41 concreteness 2.86
+	setcycle 41 correct_response "[word_response]"
+	setcycle 41 freq 132.65
+	setcycle 41 group 3
+	setcycle 41 initial left
+	setcycle 41 letters 5
+	setcycle 41 phonemes 4
+	setcycle 41 pos Adjective
+	setcycle 41 syllables 2
+	setcycle 41 trailing alone
+	setcycle 41 w_nw w
+	setcycle 42 bigram_freq 0
+	setcycle 42 concreteness 3.1
+	setcycle 42 correct_response "[word_response]"
+	setcycle 42 freq 9.99
+	setcycle 42 group 1
+	setcycle 42 initial awful
+	setcycle 42 letters 5
+	setcycle 42 phonemes 4
+	setcycle 42 pos Adverb
+	setcycle 42 syllables 2
+	setcycle 42 trailing aloud
+	setcycle 42 w_nw w
+	setcycle 43 bigram_freq 10
+	setcycle 43 concreteness 3.1
+	setcycle 43 correct_response "[word_response]"
+	setcycle 43 freq 9.99
+	setcycle 43 group 2
+	setcycle 43 initial out
+	setcycle 43 letters 5
+	setcycle 43 phonemes 4
+	setcycle 43 pos Adverb
+	setcycle 43 syllables 2
+	setcycle 43 trailing aloud
+	setcycle 43 w_nw w
+	setcycle 44 bigram_freq 154
+	setcycle 44 concreteness 3.1
+	setcycle 44 correct_response "[word_response]"
+	setcycle 44 freq 9.99
+	setcycle 44 group 3
+	setcycle 44 initial read
+	setcycle 44 letters 5
+	setcycle 44 phonemes 4
+	setcycle 44 pos Adverb
+	setcycle 44 syllables 2
+	setcycle 44 trailing aloud
+	setcycle 44 w_nw w
+	setcycle 45 bigram_freq 0
+	setcycle 45 concreteness 1.96
+	setcycle 45 correct_response "[word_response]"
+	setcycle 45 freq 4709.49
+	setcycle 45 group 1
+	setcycle 45 initial lonely
+	setcycle 45 letters 3
+	setcycle 45 phonemes 1
+	setcycle 45 pos Verb
+	setcycle 45 syllables 1
+	setcycle 45 trailing are
+	setcycle 45 w_nw w
+	setcycle 46 bigram_freq 10
+	setcycle 46 concreteness 1.96
+	setcycle 46 correct_response "[word_response]"
+	setcycle 46 freq 4709.49
+	setcycle 46 group 2
+	setcycle 46 initial arcade
+	setcycle 46 letters 3
+	setcycle 46 phonemes 1
+	setcycle 46 pos Verb
+	setcycle 46 syllables 1
+	setcycle 46 trailing are
+	setcycle 46 w_nw w
+	setcycle 47 bigram_freq 40008
+	setcycle 47 concreteness 1.96
+	setcycle 47 correct_response "[word_response]"
+	setcycle 47 freq 4709.49
+	setcycle 47 group 3
+	setcycle 47 initial there
+	setcycle 47 letters 3
+	setcycle 47 phonemes 2
+	setcycle 47 pos Verb
+	setcycle 47 syllables 1
+	setcycle 47 trailing are
+	setcycle 47 w_nw w
+	setcycle 48 bigram_freq 0
+	setcycle 48 concreteness 3.71
+	setcycle 48 correct_response "[word_response]"
+	setcycle 48 freq 24.66
+	setcycle 48 group 1
+	setcycle 48 initial exclude
+	setcycle 48 letters 6
+	setcycle 48 phonemes 5
+	setcycle 48 pos Adjective
+	setcycle 48 syllables 2
+	setcycle 48 trailing asleep
+	setcycle 48 w_nw w
+	setcycle 49 bigram_freq 10
+	setcycle 49 concreteness 3.71
+	setcycle 49 correct_response "[word_response]"
+	setcycle 49 freq 24.66
+	setcycle 49 group 2
+	setcycle 49 initial while
+	setcycle 49 letters 6
+	setcycle 49 phonemes 5
+	setcycle 49 pos Adjective
+	setcycle 49 syllables 2
+	setcycle 49 trailing asleep
+	setcycle 49 w_nw w
+	setcycle 50 bigram_freq 272
+	setcycle 50 concreteness 3.71
+	setcycle 50 correct_response "[word_response]"
+	setcycle 50 freq 24.66
+	setcycle 50 group 3
+	setcycle 50 initial fell
+	setcycle 50 letters 6
+	setcycle 50 phonemes 5
+	setcycle 50 pos Adjective
+	setcycle 50 syllables 2
+	setcycle 50 trailing asleep
+	setcycle 50 w_nw w
+	setcycle 51 bigram_freq 0
+	setcycle 51 concreteness 2.43
+	setcycle 51 correct_response "[word_response]"
+	setcycle 51 freq 9.71
+	setcycle 51 group 1
+	setcycle 51 initial outfit
+	setcycle 51 letters 6
+	setcycle 51 phonemes 4
+	setcycle 51 pos Verb
+	setcycle 51 syllables 2
+	setcycle 51 trailing assure
+	setcycle 51 w_nw w
+	setcycle 52 bigram_freq 11
+	setcycle 52 concreteness 2.43
+	setcycle 52 correct_response "[word_response]"
+	setcycle 52 freq 9.71
+	setcycle 52 group 2
+	setcycle 52 initial will
+	setcycle 52 letters 6
+	setcycle 52 phonemes 4
+	setcycle 52 pos Verb
+	setcycle 52 syllables 2
+	setcycle 52 trailing assure
+	setcycle 52 w_nw w
+	setcycle 53 bigram_freq 259
+	setcycle 53 concreteness 2.43
+	setcycle 53 correct_response "[word_response]"
+	setcycle 53 freq 9.71
+	setcycle 53 group 3
+	setcycle 53 initial can
+	setcycle 53 letters 6
+	setcycle 53 phonemes 4
+	setcycle 53 pos Verb
+	setcycle 53 syllables 2
+	setcycle 53 trailing assure
+	setcycle 53 w_nw w
+	setcycle 54 bigram_freq 0
+	setcycle 54 concreteness 2.23
+	setcycle 54 correct_response "[word_response]"
+	setcycle 54 freq 387.47
+	setcycle 54 group 1
+	setcycle 54 initial end
+	setcycle 54 letters 4
+	setcycle 54 phonemes 3
+	setcycle 54 pos Adverb
+	setcycle 54 syllables 2
+	setcycle 54 trailing away
+	setcycle 54 w_nw w
+	setcycle 55 bigram_freq 10
+	setcycle 55 concreteness 2.23
+	setcycle 55 correct_response "[word_response]"
+	setcycle 55 freq 387.47
+	setcycle 55 group 2
+	setcycle 55 initial edged
+	setcycle 55 letters 4
+	setcycle 55 phonemes 3
+	setcycle 55 pos Adverb
+	setcycle 55 syllables 2
+	setcycle 55 trailing away
+	setcycle 55 w_nw w
+	setcycle 56 bigram_freq 1652
+	setcycle 56 concreteness 2.23
+	setcycle 56 correct_response "[word_response]"
+	setcycle 56 freq 387.47
+	setcycle 56 group 3
+	setcycle 56 initial get
+	setcycle 56 letters 4
+	setcycle 56 phonemes 3
+	setcycle 56 pos Adverb
+	setcycle 56 syllables 2
+	setcycle 56 trailing away
+	setcycle 56 w_nw w
+	setcycle 57 bigram_freq 0
+	setcycle 57 concreteness 3.86
+	setcycle 57 correct_response "[word_response]"
+	setcycle 57 freq 91.52
+	setcycle 57 group 1
+	setcycle 57 initial bleed
+	setcycle 57 letters 4
+	setcycle 57 phonemes 3
+	setcycle 57 pos Noun
+	setcycle 57 syllables 1
+	setcycle 57 trailing base
+	setcycle 57 w_nw w
+	setcycle 58 bigram_freq 10
+	setcycle 58 concreteness 3.86
+	setcycle 58 correct_response "[word_response]"
+	setcycle 58 freq 91.52
+	setcycle 58 group 2
+	setcycle 58 initial any
+	setcycle 58 letters 4
+	setcycle 58 phonemes 3
+	setcycle 58 pos Noun
+	setcycle 58 syllables 1
+	setcycle 58 trailing base
+	setcycle 58 w_nw w
+	setcycle 59 bigram_freq 254
+	setcycle 59 concreteness 3.86
+	setcycle 59 correct_response "[word_response]"
+	setcycle 59 freq 91.52
+	setcycle 59 group 3
+	setcycle 59 initial data
+	setcycle 59 letters 4
+	setcycle 59 phonemes 3
+	setcycle 59 pos Noun
+	setcycle 59 syllables 1
+	setcycle 59 trailing base
+	setcycle 59 w_nw w
+	setcycle 60 bigram_freq ""
+	setcycle 60 concreteness ""
+	setcycle 60 correct_response "[nonword_response]"
+	setcycle 60 freq 0
+	setcycle 60 group 0
+	setcycle 60 initial verse
+	setcycle 60 letters ""
+	setcycle 60 phonemes ""
+	setcycle 60 pos ""
+	setcycle 60 syllables ""
+	setcycle 60 trailing crolt
+	setcycle 60 w_nw n
+	setcycle 61 bigram_freq ""
+	setcycle 61 concreteness ""
+	setcycle 61 correct_response "[nonword_response]"
+	setcycle 61 freq 0
+	setcycle 61 group 0
+	setcycle 61 initial holds
+	setcycle 61 letters ""
+	setcycle 61 phonemes ""
+	setcycle 61 pos ""
+	setcycle 61 syllables ""
+	setcycle 61 trailing deeled
+	setcycle 61 w_nw n
+	setcycle 62 bigram_freq ""
+	setcycle 62 concreteness ""
+	setcycle 62 correct_response "[nonword_response]"
+	setcycle 62 freq 0
+	setcycle 62 group 0
+	setcycle 62 initial latvia
+	setcycle 62 letters ""
+	setcycle 62 phonemes ""
+	setcycle 62 pos ""
+	setcycle 62 syllables ""
+	setcycle 62 trailing dranns
+	setcycle 62 w_nw n
+	setcycle 63 bigram_freq ""
+	setcycle 63 concreteness ""
+	setcycle 63 correct_response "[nonword_response]"
+	setcycle 63 freq 0
+	setcycle 63 group 0
+	setcycle 63 initial just
+	setcycle 63 letters ""
+	setcycle 63 phonemes ""
+	setcycle 63 pos ""
+	setcycle 63 syllables ""
+	setcycle 63 trailing drothed
+	setcycle 63 w_nw n
+	setcycle 64 bigram_freq ""
+	setcycle 64 concreteness ""
+	setcycle 64 correct_response "[nonword_response]"
+	setcycle 64 freq 0
+	setcycle 64 group 0
+	setcycle 64 initial typing
+	setcycle 64 letters ""
+	setcycle 64 phonemes ""
+	setcycle 64 pos ""
+	setcycle 64 syllables ""
+	setcycle 64 trailing drounced
+	setcycle 64 w_nw n
+	setcycle 65 bigram_freq ""
+	setcycle 65 concreteness ""
+	setcycle 65 correct_response "[nonword_response]"
+	setcycle 65 freq 0
+	setcycle 65 group 0
+	setcycle 65 initial exceed
+	setcycle 65 letters ""
+	setcycle 65 phonemes ""
+	setcycle 65 pos ""
+	setcycle 65 syllables ""
+	setcycle 65 trailing dwic
+	setcycle 65 w_nw n
+	setcycle 66 bigram_freq ""
+	setcycle 66 concreteness ""
+	setcycle 66 correct_response "[nonword_response]"
+	setcycle 66 freq 0
+	setcycle 66 group 0
+	setcycle 66 initial plate
+	setcycle 66 letters ""
+	setcycle 66 phonemes ""
+	setcycle 66 pos ""
+	setcycle 66 syllables ""
+	setcycle 66 trailing dwists
+	setcycle 66 w_nw n
+	setcycle 67 bigram_freq ""
+	setcycle 67 concreteness ""
+	setcycle 67 correct_response "[nonword_response]"
+	setcycle 67 freq 0
+	setcycle 67 group 0
+	setcycle 67 initial equals
+	setcycle 67 letters ""
+	setcycle 67 phonemes ""
+	setcycle 67 pos ""
+	setcycle 67 syllables ""
+	setcycle 67 trailing fenth
+	setcycle 67 w_nw n
+	setcycle 68 bigram_freq ""
+	setcycle 68 concreteness ""
+	setcycle 68 correct_response "[nonword_response]"
+	setcycle 68 freq 0
+	setcycle 68 group 0
+	setcycle 68 initial rate
+	setcycle 68 letters ""
+	setcycle 68 phonemes ""
+	setcycle 68 pos ""
+	setcycle 68 syllables ""
+	setcycle 68 trailing flapsed
+	setcycle 68 w_nw n
+	setcycle 69 bigram_freq ""
+	setcycle 69 concreteness ""
+	setcycle 69 correct_response "[nonword_response]"
+	setcycle 69 freq 0
+	setcycle 69 group 0
+	setcycle 69 initial course
+	setcycle 69 letters ""
+	setcycle 69 phonemes ""
+	setcycle 69 pos ""
+	setcycle 69 syllables ""
+	setcycle 69 trailing flates
+	setcycle 69 w_nw n
+	setcycle 70 bigram_freq ""
+	setcycle 70 concreteness ""
+	setcycle 70 correct_response "[nonword_response]"
+	setcycle 70 freq 0
+	setcycle 70 group 0
+	setcycle 70 initial marked
+	setcycle 70 letters ""
+	setcycle 70 phonemes ""
+	setcycle 70 pos ""
+	setcycle 70 syllables ""
+	setcycle 70 trailing flince
+	setcycle 70 w_nw n
+	setcycle 71 bigram_freq ""
+	setcycle 71 concreteness ""
+	setcycle 71 correct_response "[nonword_response]"
+	setcycle 71 freq 0
+	setcycle 71 group 0
+	setcycle 71 initial this
+	setcycle 71 letters ""
+	setcycle 71 phonemes ""
+	setcycle 71 pos ""
+	setcycle 71 syllables ""
+	setcycle 71 trailing foaths
+	setcycle 71 w_nw n
+	setcycle 72 bigram_freq ""
+	setcycle 72 concreteness ""
+	setcycle 72 correct_response "[nonword_response]"
+	setcycle 72 freq 0
+	setcycle 72 group 0
+	setcycle 72 initial weapon
+	setcycle 72 letters ""
+	setcycle 72 phonemes ""
+	setcycle 72 pos ""
+	setcycle 72 syllables ""
+	setcycle 72 trailing franced
+	setcycle 72 w_nw n
+	setcycle 73 bigram_freq ""
+	setcycle 73 concreteness ""
+	setcycle 73 correct_response "[nonword_response]"
+	setcycle 73 freq 0
+	setcycle 73 group 0
+	setcycle 73 initial only
+	setcycle 73 letters ""
+	setcycle 73 phonemes ""
+	setcycle 73 pos ""
+	setcycle 73 syllables ""
+	setcycle 73 trailing frawns
+	setcycle 73 w_nw n
+	setcycle 74 bigram_freq ""
+	setcycle 74 concreteness ""
+	setcycle 74 correct_response "[nonword_response]"
+	setcycle 74 freq 0
+	setcycle 74 group 0
+	setcycle 74 initial pounds
+	setcycle 74 letters ""
+	setcycle 74 phonemes ""
+	setcycle 74 pos ""
+	setcycle 74 syllables ""
+	setcycle 74 trailing fusk
+	setcycle 74 w_nw n
+	setcycle 75 bigram_freq ""
+	setcycle 75 concreteness ""
+	setcycle 75 correct_response "[nonword_response]"
+	setcycle 75 freq 0
+	setcycle 75 group 0
+	setcycle 75 initial know
+	setcycle 75 letters ""
+	setcycle 75 phonemes ""
+	setcycle 75 pos ""
+	setcycle 75 syllables ""
+	setcycle 75 trailing gailed
+	setcycle 75 w_nw n
+	setcycle 76 bigram_freq ""
+	setcycle 76 concreteness ""
+	setcycle 76 correct_response "[nonword_response]"
+	setcycle 76 freq 0
+	setcycle 76 group 0
+	setcycle 76 initial pike
+	setcycle 76 letters ""
+	setcycle 76 phonemes ""
+	setcycle 76 pos ""
+	setcycle 76 syllables ""
+	setcycle 76 trailing ghowse
+	setcycle 76 w_nw n
+	setcycle 77 bigram_freq ""
+	setcycle 77 concreteness ""
+	setcycle 77 correct_response "[nonword_response]"
+	setcycle 77 freq 0
+	setcycle 77 group 0
+	setcycle 77 initial were
+	setcycle 77 letters ""
+	setcycle 77 phonemes ""
+	setcycle 77 pos ""
+	setcycle 77 syllables ""
+	setcycle 77 trailing gleld
+	setcycle 77 w_nw n
+	setcycle 78 bigram_freq ""
+	setcycle 78 concreteness ""
+	setcycle 78 correct_response "[nonword_response]"
+	setcycle 78 freq 0
+	setcycle 78 group 0
+	setcycle 78 initial come
+	setcycle 78 letters ""
+	setcycle 78 phonemes ""
+	setcycle 78 pos ""
+	setcycle 78 syllables ""
+	setcycle 78 trailing greeds
+	setcycle 78 w_nw n
+	setcycle 79 bigram_freq ""
+	setcycle 79 concreteness ""
+	setcycle 79 correct_response "[nonword_response]"
+	setcycle 79 freq 0
+	setcycle 79 group 0
+	setcycle 79 initial almost
+	setcycle 79 letters ""
+	setcycle 79 phonemes ""
+	setcycle 79 pos ""
+	setcycle 79 syllables ""
+	setcycle 79 trailing grefs
+	setcycle 79 w_nw n
+	setcycle 80 bigram_freq ""
+	setcycle 80 concreteness ""
+	setcycle 80 correct_response "[nonword_response]"
+	setcycle 80 freq 0
+	setcycle 80 group 0
+	setcycle 80 initial sunday
+	setcycle 80 letters ""
+	setcycle 80 phonemes ""
+	setcycle 80 pos ""
+	setcycle 80 syllables ""
+	setcycle 80 trailing grourn
+	setcycle 80 w_nw n
+	setcycle 81 bigram_freq ""
+	setcycle 81 concreteness ""
+	setcycle 81 correct_response "[nonword_response]"
+	setcycle 81 freq 0
+	setcycle 81 group 0
+	setcycle 81 initial party
+	setcycle 81 letters ""
+	setcycle 81 phonemes ""
+	setcycle 81 pos ""
+	setcycle 81 syllables ""
+	setcycle 81 trailing gwanc
+	setcycle 81 w_nw n
+	setcycle 82 bigram_freq ""
+	setcycle 82 concreteness ""
+	setcycle 82 correct_response "[nonword_response]"
+	setcycle 82 freq 0
+	setcycle 82 group 0
+	setcycle 82 initial reach
+	setcycle 82 letters ""
+	setcycle 82 phonemes ""
+	setcycle 82 pos ""
+	setcycle 82 syllables ""
+	setcycle 82 trailing gwerge
+	setcycle 82 w_nw n
+	setcycle 83 bigram_freq ""
+	setcycle 83 concreteness ""
+	setcycle 83 correct_response "[nonword_response]"
+	setcycle 83 freq 0
+	setcycle 83 group 0
+	setcycle 83 initial rise
+	setcycle 83 letters ""
+	setcycle 83 phonemes ""
+	setcycle 83 pos ""
+	setcycle 83 syllables ""
+	setcycle 83 trailing gwodd
+	setcycle 83 w_nw n
+	setcycle 84 bigram_freq ""
+	setcycle 84 concreteness ""
+	setcycle 84 correct_response "[nonword_response]"
+	setcycle 84 freq 0
+	setcycle 84 group 0
+	setcycle 84 initial probe
+	setcycle 84 letters ""
+	setcycle 84 phonemes ""
+	setcycle 84 pos ""
+	setcycle 84 syllables ""
+	setcycle 84 trailing gwoints
+	setcycle 84 w_nw n
+	setcycle 85 bigram_freq ""
+	setcycle 85 concreteness ""
+	setcycle 85 correct_response "[nonword_response]"
+	setcycle 85 freq 0
+	setcycle 85 group 0
+	setcycle 85 initial owns
+	setcycle 85 letters ""
+	setcycle 85 phonemes ""
+	setcycle 85 pos ""
+	setcycle 85 syllables ""
+	setcycle 85 trailing jirts
+	setcycle 85 w_nw n
+	setcycle 86 bigram_freq ""
+	setcycle 86 concreteness ""
+	setcycle 86 correct_response "[nonword_response]"
+	setcycle 86 freq 0
+	setcycle 86 group 0
+	setcycle 86 initial exodus
+	setcycle 86 letters ""
+	setcycle 86 phonemes ""
+	setcycle 86 pos ""
+	setcycle 86 syllables ""
+	setcycle 86 trailing jurched
+	setcycle 86 w_nw n
+	setcycle 87 bigram_freq ""
+	setcycle 87 concreteness ""
+	setcycle 87 correct_response "[nonword_response]"
+	setcycle 87 freq 0
+	setcycle 87 group 0
+	setcycle 87 initial mean
+	setcycle 87 letters ""
+	setcycle 87 phonemes ""
+	setcycle 87 pos ""
+	setcycle 87 syllables ""
+	setcycle 87 trailing kerms
+	setcycle 87 w_nw n
+	setcycle 88 bigram_freq ""
+	setcycle 88 concreteness ""
+	setcycle 88 correct_response "[nonword_response]"
+	setcycle 88 freq 0
+	setcycle 88 group 0
+	setcycle 88 initial below
+	setcycle 88 letters ""
+	setcycle 88 phonemes ""
+	setcycle 88 pos ""
+	setcycle 88 syllables ""
+	setcycle 88 trailing knorged
+	setcycle 88 w_nw n
+	setcycle 89 bigram_freq ""
+	setcycle 89 concreteness ""
+	setcycle 89 correct_response "[nonword_response]"
+	setcycle 89 freq 0
+	setcycle 89 group 0
+	setcycle 89 initial grew
+	setcycle 89 letters ""
+	setcycle 89 phonemes ""
+	setcycle 89 pos ""
+	setcycle 89 syllables ""
+	setcycle 89 trailing knorps
+	setcycle 89 w_nw n
+	run trial_sequence_1
+
+define loop block_loop_2
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence_2
+	set description "A single block of trials"
+	set cycles 90
+	set continuous no
+	set column_order "initial;trailing;concreteness;pos;syllables;phonemes;letters;freq;bigram_freq;w_nw;group;correct_response"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 bigram_freq 0
+	setcycle 0 concreteness 2.26
+	setcycle 0 correct_response "[word_response]"
+	setcycle 0 freq 112.27
+	setcycle 0 group 1
+	setcycle 0 initial pop
+	setcycle 0 letters 5
+	setcycle 0 phonemes 5
+	setcycle 0 pos Adjective
+	setcycle 0 syllables 2
+	setcycle 0 trailing basic
+	setcycle 0 w_nw w
+	setcycle 1 bigram_freq 10
+	setcycle 1 concreteness 2.26
+	setcycle 1 correct_response "[word_response]"
+	setcycle 1 freq 112.27
+	setcycle 1 group 2
+	setcycle 1 initial full
+	setcycle 1 letters 5
+	setcycle 1 phonemes 5
+	setcycle 1 pos Adjective
+	setcycle 1 syllables 2
+	setcycle 1 trailing basic
+	setcycle 1 w_nw w
+	setcycle 2 bigram_freq 268
+	setcycle 2 concreteness 2.26
+	setcycle 2 correct_response "[word_response]"
+	setcycle 2 freq 112.27
+	setcycle 2 group 3
+	setcycle 2 initial most
+	setcycle 2 letters 5
+	setcycle 2 phonemes 5
+	setcycle 2 pos Adjective
+	setcycle 2 syllables 2
+	setcycle 2 trailing basic
+	setcycle 2 w_nw w
+	setcycle 3 bigram_freq 0
+	setcycle 3 concreteness 3.14
+	setcycle 3 correct_response "[word_response]"
+	setcycle 3 freq 14.03
+	setcycle 3 group 1
+	setcycle 3 initial choice
+	setcycle 3 letters 7
+	setcycle 3 phonemes 6
+	setcycle 3 pos Noun
+	setcycle 3 syllables 2
+	setcycle 3 trailing bastard
+	setcycle 3 w_nw w
+	setcycle 4 bigram_freq 12
+	setcycle 4 concreteness 3.14
+	setcycle 4 correct_response "[word_response]"
+	setcycle 4 freq 14.03
+	setcycle 4 group 2
+	setcycle 4 initial fucking
+	setcycle 4 letters 7
+	setcycle 4 phonemes 6
+	setcycle 4 pos Noun
+	setcycle 4 syllables 2
+	setcycle 4 trailing bastard
+	setcycle 4 w_nw w
+	setcycle 5 bigram_freq 125
+	setcycle 5 concreteness 3.14
+	setcycle 5 correct_response "[word_response]"
+	setcycle 5 freq 14.03
+	setcycle 5 group 3
+	setcycle 5 initial you
+	setcycle 5 letters 7
+	setcycle 5 phonemes 6
+	setcycle 5 pos Noun
+	setcycle 5 syllables 2
+	setcycle 5 trailing bastard
+	setcycle 5 w_nw w
+	setcycle 6 bigram_freq 0
+	setcycle 6 concreteness 1.22
+	setcycle 6 correct_response "[word_response]"
+	setcycle 6 freq 851.85
+	setcycle 6 group 1
+	setcycle 6 initial kinship
+	setcycle 6 letters 7
+	setcycle 6 phonemes 5
+	setcycle 6 pos Conjunction
+	setcycle 6 syllables 2
+	setcycle 6 trailing because
+	setcycle 6 w_nw w
+	setcycle 7 bigram_freq 10
+	setcycle 7 concreteness 1.22
+	setcycle 7 correct_response "[word_response]"
+	setcycle 7 freq 851.85
+	setcycle 7 group 2
+	setcycle 7 initial achieve
+	setcycle 7 letters 7
+	setcycle 7 phonemes 5
+	setcycle 7 pos Conjunction
+	setcycle 7 syllables 2
+	setcycle 7 trailing because
+	setcycle 7 w_nw w
+	setcycle 8 bigram_freq 1686
+	setcycle 8 concreteness 1.22
+	setcycle 8 correct_response "[word_response]"
+	setcycle 8 freq 851.85
+	setcycle 8 group 3
+	setcycle 8 initial but
+	setcycle 8 letters 7
+	setcycle 8 phonemes 5
+	setcycle 8 pos Conjunction
+	setcycle 8 syllables 2
+	setcycle 8 trailing because
+	setcycle 8 w_nw w
+	setcycle 9 bigram_freq 0
+	setcycle 9 concreteness 1.61
+	setcycle 9 correct_response "[word_response]"
+	setcycle 9 freq 77.18
+	setcycle 9 group 1
+	setcycle 9 initial dialect
+	setcycle 9 letters 7
+	setcycle 9 phonemes 6
+	setcycle 9 pos Verb
+	setcycle 9 syllables 2
+	setcycle 9 trailing becomes
+	setcycle 9 w_nw w
+	setcycle 10 bigram_freq 10
+	setcycle 10 concreteness 1.61
+	setcycle 10 correct_response "[word_response]"
+	setcycle 10 freq 77.18
+	setcycle 10 group 2
+	setcycle 10 initial area
+	setcycle 10 letters 7
+	setcycle 10 phonemes 6
+	setcycle 10 pos Verb
+	setcycle 10 syllables 2
+	setcycle 10 trailing becomes
+	setcycle 10 w_nw w
+	setcycle 11 bigram_freq 143
+	setcycle 11 concreteness 1.61
+	setcycle 11 correct_response "[word_response]"
+	setcycle 11 freq 77.18
+	setcycle 11 group 3
+	setcycle 11 initial then
+	setcycle 11 letters 7
+	setcycle 11 phonemes 6
+	setcycle 11 pos Verb
+	setcycle 11 syllables 2
+	setcycle 11 trailing becomes
+	setcycle 11 w_nw w
+	setcycle 12 bigram_freq 0
+	setcycle 12 concreteness 4.9
+	setcycle 12 correct_response "[word_response]"
+	setcycle 12 freq 21.48
+	setcycle 12 group 1
+	setcycle 12 initial plot
+	setcycle 12 letters 4
+	setcycle 12 phonemes 4
+	setcycle 12 pos Noun
+	setcycle 12 syllables 1
+	setcycle 12 trailing belt
+	setcycle 12 w_nw w
+	setcycle 13 bigram_freq 11
+	setcycle 13 concreteness 4.9
+	setcycle 13 correct_response "[word_response]"
+	setcycle 13 freq 21.48
+	setcycle 13 group 2
+	setcycle 13 initial money
+	setcycle 13 letters 4
+	setcycle 13 phonemes 4
+	setcycle 13 pos Noun
+	setcycle 13 syllables 1
+	setcycle 13 trailing belt
+	setcycle 13 w_nw w
+	setcycle 14 bigram_freq 219
+	setcycle 14 concreteness 4.9
+	setcycle 14 correct_response "[word_response]"
+	setcycle 14 freq 21.48
+	setcycle 14 group 3
+	setcycle 14 initial green
+	setcycle 14 letters 4
+	setcycle 14 phonemes 4
+	setcycle 14 pos Noun
+	setcycle 14 syllables 1
+	setcycle 14 trailing belt
+	setcycle 14 w_nw w
+	setcycle 15 bigram_freq 0
+	setcycle 15 concreteness 3.62
+	setcycle 15 correct_response "[word_response]"
+	setcycle 15 freq 23.93
+	setcycle 15 group 1
+	setcycle 15 initial fan
+	setcycle 15 letters 4
+	setcycle 15 phonemes 4
+	setcycle 15 pos Verb
+	setcycle 15 syllables 1
+	setcycle 15 trailing bent
+	setcycle 15 w_nw w
+	setcycle 16 bigram_freq 10
+	setcycle 16 concreteness 3.62
+	setcycle 16 correct_response "[word_response]"
+	setcycle 16 freq 23.93
+	setcycle 16 group 2
+	setcycle 16 initial being
+	setcycle 16 letters 4
+	setcycle 16 phonemes 4
+	setcycle 16 pos Verb
+	setcycle 16 syllables 1
+	setcycle 16 trailing bent
+	setcycle 16 w_nw w
+	setcycle 17 bigram_freq 142
+	setcycle 17 concreteness 3.62
+	setcycle 17 correct_response "[word_response]"
+	setcycle 17 freq 23.93
+	setcycle 17 group 3
+	setcycle 17 initial she
+	setcycle 17 letters 4
+	setcycle 17 phonemes 4
+	setcycle 17 pos Verb
+	setcycle 17 syllables 1
+	setcycle 17 trailing bent
+	setcycle 17 w_nw w
+	setcycle 18 bigram_freq 0
+	setcycle 18 concreteness 2.59
+	setcycle 18 correct_response "[word_response]"
+	setcycle 18 freq 57.93
+	setcycle 18 group 1
+	setcycle 18 initial example
+	setcycle 18 letters 6
+	setcycle 18 phonemes 5
+	setcycle 18 pos Preposition
+	setcycle 18 syllables 2
+	setcycle 18 trailing beside
+	setcycle 18 w_nw w
+	setcycle 19 bigram_freq 10
+	setcycle 19 concreteness 2.59
+	setcycle 19 correct_response "[word_response]"
+	setcycle 19 freq 57.93
+	setcycle 19 group 2
+	setcycle 19 initial displayed
+	setcycle 19 letters 6
+	setcycle 19 phonemes 5
+	setcycle 19 pos Preposition
+	setcycle 19 syllables 2
+	setcycle 19 trailing beside
+	setcycle 19 w_nw w
+	setcycle 20 bigram_freq 262
+	setcycle 20 concreteness 2.59
+	setcycle 20 correct_response "[word_response]"
+	setcycle 20 freq 57.93
+	setcycle 20 group 3
+	setcycle 20 initial down
+	setcycle 20 letters 6
+	setcycle 20 phonemes 5
+	setcycle 20 pos Preposition
+	setcycle 20 syllables 2
+	setcycle 20 trailing beside
+	setcycle 20 w_nw w
+	setcycle 21 bigram_freq 0
+	setcycle 21 concreteness 2.72
+	setcycle 21 correct_response "[word_response]"
+	setcycle 21 freq 906.64
+	setcycle 21 group 1
+	setcycle 21 initial delay
+	setcycle 21 letters 7
+	setcycle 21 phonemes 6
+	setcycle 21 pos Preposition
+	setcycle 21 syllables 2
+	setcycle 21 trailing between
+	setcycle 21 w_nw w
+	setcycle 22 bigram_freq 10
+	setcycle 22 concreteness 2.72
+	setcycle 22 correct_response "[word_response]"
+	setcycle 22 freq 906.64
+	setcycle 22 group 2
+	setcycle 22 initial alone
+	setcycle 22 letters 7
+	setcycle 22 phonemes 6
+	setcycle 22 pos Preposition
+	setcycle 22 syllables 2
+	setcycle 22 trailing between
+	setcycle 22 w_nw w
+	setcycle 23 bigram_freq 3262
+	setcycle 23 concreteness 2.72
+	setcycle 23 correct_response "[word_response]"
+	setcycle 23 freq 906.64
+	setcycle 23 group 3
+	setcycle 23 initial difference
+	setcycle 23 letters 7
+	setcycle 23 phonemes 6
+	setcycle 23 pos Preposition
+	setcycle 23 syllables 2
+	setcycle 23 trailing between
+	setcycle 23 w_nw w
+	setcycle 24 bigram_freq 0
+	setcycle 24 concreteness 1.72
+	setcycle 24 correct_response "[word_response]"
+	setcycle 24 freq 118.3
+	setcycle 24 group 1
+	setcycle 24 initial lemon
+	setcycle 24 letters 6
+	setcycle 24 phonemes 5
+	setcycle 24 pos Preposition
+	setcycle 24 syllables 2
+	setcycle 24 trailing beyond
+	setcycle 24 w_nw w
+	setcycle 25 bigram_freq 10
+	setcycle 25 concreteness 1.72
+	setcycle 25 correct_response "[word_response]"
+	setcycle 25 freq 118.3
+	setcycle 25 group 2
+	setcycle 25 initial country
+	setcycle 25 letters 6
+	setcycle 25 phonemes 5
+	setcycle 25 pos Preposition
+	setcycle 25 syllables 2
+	setcycle 25 trailing beyond
+	setcycle 25 w_nw w
+	setcycle 26 bigram_freq 394
+	setcycle 26 concreteness 1.72
+	setcycle 26 correct_response "[word_response]"
+	setcycle 26 freq 118.3
+	setcycle 26 group 3
+	setcycle 26 initial far
+	setcycle 26 letters 6
+	setcycle 26 phonemes 5
+	setcycle 26 pos Preposition
+	setcycle 26 syllables 2
+	setcycle 26 trailing beyond
+	setcycle 26 w_nw w
+	setcycle 27 bigram_freq 0
+	setcycle 27 concreteness 3.66
+	setcycle 27 correct_response "[word_response]"
+	setcycle 27 freq 255.82
+	setcycle 27 group 1
+	setcycle 27 initial height
+	setcycle 27 letters 3
+	setcycle 27 phonemes 3
+	setcycle 27 pos Adjective
+	setcycle 27 syllables 1
+	setcycle 27 trailing big
+	setcycle 27 w_nw w
+	setcycle 28 bigram_freq 10
+	setcycle 28 concreteness 3.66
+	setcycle 28 correct_response "[word_response]"
+	setcycle 28 freq 255.82
+	setcycle 28 group 2
+	setcycle 28 initial fine
+	setcycle 28 letters 3
+	setcycle 28 phonemes 3
+	setcycle 28 pos Adjective
+	setcycle 28 syllables 1
+	setcycle 28 trailing big
+	setcycle 28 w_nw w
+	setcycle 29 bigram_freq 599
+	setcycle 29 concreteness 3.66
+	setcycle 29 correct_response "[word_response]"
+	setcycle 29 freq 255.82
+	setcycle 29 group 3
+	setcycle 29 initial too
+	setcycle 29 letters 3
+	setcycle 29 phonemes 3
+	setcycle 29 pos Adjective
+	setcycle 29 syllables 1
+	setcycle 29 trailing big
+	setcycle 29 w_nw w
+	setcycle 30 bigram_freq 0
+	setcycle 30 concreteness 3.2
+	setcycle 30 correct_response "[word_response]"
+	setcycle 30 freq 32.47
+	setcycle 30 group 1
+	setcycle 30 initial corpse
+	setcycle 30 letters 8
+	setcycle 30 phonemes 5
+	setcycle 30 pos Noun
+	setcycle 30 syllables 2
+	setcycle 30 trailing birthday
+	setcycle 30 w_nw w
+	setcycle 31 bigram_freq 10
+	setcycle 31 concreteness 3.2
+	setcycle 31 correct_response "[word_response]"
+	setcycle 31 freq 32.47
+	setcycle 31 group 2
+	setcycle 31 initial eighth
+	setcycle 31 letters 8
+	setcycle 31 phonemes 5
+	setcycle 31 pos Noun
+	setcycle 31 syllables 2
+	setcycle 31 trailing birthday
+	setcycle 31 w_nw w
+	setcycle 32 bigram_freq 234
+	setcycle 32 concreteness 3.2
+	setcycle 32 correct_response "[word_response]"
+	setcycle 32 freq 32.47
+	setcycle 32 group 3
+	setcycle 32 initial happy
+	setcycle 32 letters 8
+	setcycle 32 phonemes 5
+	setcycle 32 pos Noun
+	setcycle 32 syllables 2
+	setcycle 32 trailing birthday
+	setcycle 32 w_nw w
+	setcycle 33 bigram_freq 0
+	setcycle 33 concreteness 4.57
+	setcycle 33 correct_response "[word_response]"
+	setcycle 33 freq 138.28
+	setcycle 33 group 1
+	setcycle 33 initial fight
+	setcycle 33 letters 5
+	setcycle 33 phonemes 4
+	setcycle 33 pos Noun
+	setcycle 33 syllables 1
+	setcycle 33 trailing board
+	setcycle 33 w_nw w
+	setcycle 34 bigram_freq 10
+	setcycle 34 concreteness 4.57
+	setcycle 34 correct_response "[word_response]"
+	setcycle 34 freq 138.28
+	setcycle 34 group 2
+	setcycle 34 initial diving
+	setcycle 34 letters 5
+	setcycle 34 phonemes 4
+	setcycle 34 pos Noun
+	setcycle 34 syllables 1
+	setcycle 34 trailing board
+	setcycle 34 w_nw w
+	setcycle 35 bigram_freq 234
+	setcycle 35 concreteness 4.57
+	setcycle 35 correct_response "[word_response]"
+	setcycle 35 freq 138.28
+	setcycle 35 group 3
+	setcycle 35 initial tourist
+	setcycle 35 letters 5
+	setcycle 35 phonemes 4
+	setcycle 35 pos Noun
+	setcycle 35 syllables 1
+	setcycle 35 trailing board
+	setcycle 35 w_nw w
+	setcycle 36 bigram_freq 0
+	setcycle 36 concreteness 3.85
+	setcycle 36 correct_response "[word_response]"
+	setcycle 36 freq 181.49
+	setcycle 36 group 1
+	setcycle 36 initial wire
+	setcycle 36 letters 5
+	setcycle 36 phonemes 4
+	setcycle 36 pos Noun
+	setcycle 36 syllables 1
+	setcycle 36 trailing class
+	setcycle 36 w_nw w
+	setcycle 37 bigram_freq 10
+	setcycle 37 concreteness 3.85
+	setcycle 37 correct_response "[word_response]"
+	setcycle 37 freq 181.49
+	setcycle 37 group 2
+	setcycle 37 initial against
+	setcycle 37 letters 5
+	setcycle 37 phonemes 4
+	setcycle 37 pos Noun
+	setcycle 37 syllables 1
+	setcycle 37 trailing class
+	setcycle 37 w_nw w
+	setcycle 38 bigram_freq 1831
+	setcycle 38 concreteness 3.85
+	setcycle 38 correct_response "[word_response]"
+	setcycle 38 freq 181.49
+	setcycle 38 group 3
+	setcycle 38 initial working
+	setcycle 38 letters 5
+	setcycle 38 phonemes 4
+	setcycle 38 pos Noun
+	setcycle 38 syllables 1
+	setcycle 38 trailing class
+	setcycle 38 w_nw w
+	setcycle 39 bigram_freq 0
+	setcycle 39 concreteness 4.9
+	setcycle 39 correct_response "[word_response]"
+	setcycle 39 freq 89.22
+	setcycle 39 group 1
+	setcycle 39 initial seminar
+	setcycle 39 letters 3
+	setcycle 39 phonemes 4
+	setcycle 39 pos Noun
+	setcycle 39 syllables 1
+	setcycle 39 trailing box
+	setcycle 39 w_nw w
+	setcycle 40 bigram_freq 10
+	setcycle 40 concreteness 4.9
+	setcycle 40 correct_response "[word_response]"
+	setcycle 40 freq 89.22
+	setcycle 40 group 2
+	setcycle 40 initial candy
+	setcycle 40 letters 3
+	setcycle 40 phonemes 4
+	setcycle 40 pos Noun
+	setcycle 40 syllables 1
+	setcycle 40 trailing box
+	setcycle 40 w_nw w
+	setcycle 41 bigram_freq 138
+	setcycle 41 concreteness 4.9
+	setcycle 41 correct_response "[word_response]"
+	setcycle 41 freq 89.22
+	setcycle 41 group 3
+	setcycle 41 initial cardboard
+	setcycle 41 letters 3
+	setcycle 41 phonemes 4
+	setcycle 41 pos Noun
+	setcycle 41 syllables 1
+	setcycle 41 trailing box
+	setcycle 41 w_nw w
+	setcycle 42 bigram_freq 0
+	setcycle 42 concreteness 4.9
+	setcycle 42 correct_response "[word_response]"
+	setcycle 42 freq 54.84
+	setcycle 42 group 1
+	setcycle 42 initial tiger
+	setcycle 42 letters 6
+	setcycle 42 phonemes 5
+	setcycle 42 pos Noun
+	setcycle 42 syllables 1
+	setcycle 42 trailing branch
+	setcycle 42 w_nw w
+	setcycle 43 bigram_freq 10
+	setcycle 43 concreteness 4.9
+	setcycle 43 correct_response "[word_response]"
+	setcycle 43 freq 54.84
+	setcycle 43 group 2
+	setcycle 43 initial same
+	setcycle 43 letters 6
+	setcycle 43 phonemes 5
+	setcycle 43 pos Noun
+	setcycle 43 syllables 1
+	setcycle 43 trailing branch
+	setcycle 43 w_nw w
+	setcycle 44 bigram_freq 147
+	setcycle 44 concreteness 4.9
+	setcycle 44 correct_response "[word_response]"
+	setcycle 44 freq 54.84
+	setcycle 44 group 3
+	setcycle 44 initial special
+	setcycle 44 letters 6
+	setcycle 44 phonemes 5
+	setcycle 44 pos Noun
+	setcycle 44 syllables 1
+	setcycle 44 trailing branch
+	setcycle 44 w_nw w
+	setcycle 45 bigram_freq ""
+	setcycle 45 concreteness ""
+	setcycle 45 correct_response "[nonword_response]"
+	setcycle 45 freq 0
+	setcycle 45 group 0
+	setcycle 45 initial write
+	setcycle 45 letters ""
+	setcycle 45 phonemes ""
+	setcycle 45 pos ""
+	setcycle 45 syllables ""
+	setcycle 45 trailing knume
+	setcycle 45 w_nw n
+	setcycle 46 bigram_freq ""
+	setcycle 46 concreteness ""
+	setcycle 46 correct_response "[nonword_response]"
+	setcycle 46 freq 0
+	setcycle 46 group 0
+	setcycle 46 initial used
+	setcycle 46 letters ""
+	setcycle 46 phonemes ""
+	setcycle 46 pos ""
+	setcycle 46 syllables ""
+	setcycle 46 trailing kusks
+	setcycle 46 w_nw n
+	setcycle 47 bigram_freq ""
+	setcycle 47 concreteness ""
+	setcycle 47 correct_response "[nonword_response]"
+	setcycle 47 freq 0
+	setcycle 47 group 0
+	setcycle 47 initial with
+	setcycle 47 letters ""
+	setcycle 47 phonemes ""
+	setcycle 47 pos ""
+	setcycle 47 syllables ""
+	setcycle 47 trailing meald
+	setcycle 47 w_nw n
+	setcycle 48 bigram_freq ""
+	setcycle 48 concreteness ""
+	setcycle 48 correct_response "[nonword_response]"
+	setcycle 48 freq 0
+	setcycle 48 group 0
+	setcycle 48 initial extra
+	setcycle 48 letters ""
+	setcycle 48 phonemes ""
+	setcycle 48 pos ""
+	setcycle 48 syllables ""
+	setcycle 48 trailing mupped
+	setcycle 48 w_nw n
+	setcycle 49 bigram_freq ""
+	setcycle 49 concreteness ""
+	setcycle 49 correct_response "[nonword_response]"
+	setcycle 49 freq 0
+	setcycle 49 group 0
+	setcycle 49 initial break
+	setcycle 49 letters ""
+	setcycle 49 phonemes ""
+	setcycle 49 pos ""
+	setcycle 49 syllables ""
+	setcycle 49 trailing ninn
+	setcycle 49 w_nw n
+	setcycle 50 bigram_freq ""
+	setcycle 50 concreteness ""
+	setcycle 50 correct_response "[nonword_response]"
+	setcycle 50 freq 0
+	setcycle 50 group 0
+	setcycle 50 initial save
+	setcycle 50 letters ""
+	setcycle 50 phonemes ""
+	setcycle 50 pos ""
+	setcycle 50 syllables ""
+	setcycle 50 trailing nooch
+	setcycle 50 w_nw n
+	setcycle 51 bigram_freq ""
+	setcycle 51 concreteness ""
+	setcycle 51 correct_response "[nonword_response]"
+	setcycle 51 freq 0
+	setcycle 51 group 0
+	setcycle 51 initial hearts
+	setcycle 51 letters ""
+	setcycle 51 phonemes ""
+	setcycle 51 pos ""
+	setcycle 51 syllables ""
+	setcycle 51 trailing nooves
+	setcycle 51 w_nw n
+	setcycle 52 bigram_freq ""
+	setcycle 52 concreteness ""
+	setcycle 52 correct_response "[nonword_response]"
+	setcycle 52 freq 0
+	setcycle 52 group 0
+	setcycle 52 initial annual
+	setcycle 52 letters ""
+	setcycle 52 phonemes ""
+	setcycle 52 pos ""
+	setcycle 52 syllables ""
+	setcycle 52 trailing olts
+	setcycle 52 w_nw n
+	setcycle 53 bigram_freq ""
+	setcycle 53 concreteness ""
+	setcycle 53 correct_response "[nonword_response]"
+	setcycle 53 freq 0
+	setcycle 53 group 0
+	setcycle 53 initial minus
+	setcycle 53 letters ""
+	setcycle 53 phonemes ""
+	setcycle 53 pos ""
+	setcycle 53 syllables ""
+	setcycle 53 trailing paifs
+	setcycle 53 w_nw n
+	setcycle 54 bigram_freq ""
+	setcycle 54 concreteness ""
+	setcycle 54 correct_response "[nonword_response]"
+	setcycle 54 freq 0
+	setcycle 54 group 0
+	setcycle 54 initial game
+	setcycle 54 letters ""
+	setcycle 54 phonemes ""
+	setcycle 54 pos ""
+	setcycle 54 syllables ""
+	setcycle 54 trailing paped
+	setcycle 54 w_nw n
+	setcycle 55 bigram_freq ""
+	setcycle 55 concreteness ""
+	setcycle 55 correct_response "[nonword_response]"
+	setcycle 55 freq 0
+	setcycle 55 group 0
+	setcycle 55 initial corner
+	setcycle 55 letters ""
+	setcycle 55 phonemes ""
+	setcycle 55 pos ""
+	setcycle 55 syllables ""
+	setcycle 55 trailing pheche
+	setcycle 55 w_nw n
+	setcycle 56 bigram_freq ""
+	setcycle 56 concreteness ""
+	setcycle 56 correct_response "[nonword_response]"
+	setcycle 56 freq 0
+	setcycle 56 group 0
+	setcycle 56 initial bread
+	setcycle 56 letters ""
+	setcycle 56 phonemes ""
+	setcycle 56 pos ""
+	setcycle 56 syllables ""
+	setcycle 56 trailing phleague
+	setcycle 56 w_nw n
+	setcycle 57 bigram_freq ""
+	setcycle 57 concreteness ""
+	setcycle 57 correct_response "[nonword_response]"
+	setcycle 57 freq 0
+	setcycle 57 group 0
+	setcycle 57 initial round
+	setcycle 57 letters ""
+	setcycle 57 phonemes ""
+	setcycle 57 pos ""
+	setcycle 57 syllables ""
+	setcycle 57 trailing phlod
+	setcycle 57 w_nw n
+	setcycle 58 bigram_freq ""
+	setcycle 58 concreteness ""
+	setcycle 58 correct_response "[nonword_response]"
+	setcycle 58 freq 0
+	setcycle 58 group 0
+	setcycle 58 initial islam
+	setcycle 58 letters ""
+	setcycle 58 phonemes ""
+	setcycle 58 pos ""
+	setcycle 58 syllables ""
+	setcycle 58 trailing phrasp
+	setcycle 58 w_nw n
+	setcycle 59 bigram_freq ""
+	setcycle 59 concreteness ""
+	setcycle 59 correct_response "[nonword_response]"
+	setcycle 59 freq 0
+	setcycle 59 group 0
+	setcycle 59 initial style
+	setcycle 59 letters ""
+	setcycle 59 phonemes ""
+	setcycle 59 pos ""
+	setcycle 59 syllables ""
+	setcycle 59 trailing phrinsed
+	setcycle 59 w_nw n
+	setcycle 60 bigram_freq ""
+	setcycle 60 concreteness ""
+	setcycle 60 correct_response "[nonword_response]"
+	setcycle 60 freq 0
+	setcycle 60 group 0
+	setcycle 60 initial raid
+	setcycle 60 letters ""
+	setcycle 60 phonemes ""
+	setcycle 60 pos ""
+	setcycle 60 syllables ""
+	setcycle 60 trailing phrirmed
+	setcycle 60 w_nw n
+	setcycle 61 bigram_freq ""
+	setcycle 61 concreteness ""
+	setcycle 61 correct_response "[nonword_response]"
+	setcycle 61 freq 0
+	setcycle 61 group 0
+	setcycle 61 initial "plc-"
+	setcycle 61 letters ""
+	setcycle 61 phonemes ""
+	setcycle 61 pos ""
+	setcycle 61 syllables ""
+	setcycle 61 trailing phrup
+	setcycle 61 w_nw n
+	setcycle 62 bigram_freq ""
+	setcycle 62 concreteness ""
+	setcycle 62 correct_response "[nonword_response]"
+	setcycle 62 freq 0
+	setcycle 62 group 0
+	setcycle 62 initial others
+	setcycle 62 letters ""
+	setcycle 62 phonemes ""
+	setcycle 62 pos ""
+	setcycle 62 syllables ""
+	setcycle 62 trailing plauled
+	setcycle 62 w_nw n
+	setcycle 63 bigram_freq ""
+	setcycle 63 concreteness ""
+	setcycle 63 correct_response "[nonword_response]"
+	setcycle 63 freq 0
+	setcycle 63 group 0
+	setcycle 63 initial three
+	setcycle 63 letters ""
+	setcycle 63 phonemes ""
+	setcycle 63 pos ""
+	setcycle 63 syllables ""
+	setcycle 63 trailing pleel
+	setcycle 63 w_nw n
+	setcycle 64 bigram_freq ""
+	setcycle 64 concreteness ""
+	setcycle 64 correct_response "[nonword_response]"
+	setcycle 64 freq 0
+	setcycle 64 group 0
+	setcycle 64 initial acts
+	setcycle 64 letters ""
+	setcycle 64 phonemes ""
+	setcycle 64 pos ""
+	setcycle 64 syllables ""
+	setcycle 64 trailing plenes
+	setcycle 64 w_nw n
+	setcycle 65 bigram_freq ""
+	setcycle 65 concreteness ""
+	setcycle 65 correct_response "[nonword_response]"
+	setcycle 65 freq 0
+	setcycle 65 group 0
+	setcycle 65 initial some
+	setcycle 65 letters ""
+	setcycle 65 phonemes ""
+	setcycle 65 pos ""
+	setcycle 65 syllables ""
+	setcycle 65 trailing plolf
+	setcycle 65 w_nw n
+	setcycle 66 bigram_freq ""
+	setcycle 66 concreteness ""
+	setcycle 66 correct_response "[nonword_response]"
+	setcycle 66 freq 0
+	setcycle 66 group 0
+	setcycle 66 initial today
+	setcycle 66 letters ""
+	setcycle 66 phonemes ""
+	setcycle 66 pos ""
+	setcycle 66 syllables ""
+	setcycle 66 trailing plym
+	setcycle 66 w_nw n
+	setcycle 67 bigram_freq ""
+	setcycle 67 concreteness ""
+	setcycle 67 correct_response "[nonword_response]"
+	setcycle 67 freq 0
+	setcycle 67 group 0
+	setcycle 67 initial each
+	setcycle 67 letters ""
+	setcycle 67 phonemes ""
+	setcycle 67 pos ""
+	setcycle 67 syllables ""
+	setcycle 67 trailing prirps
+	setcycle 67 w_nw n
+	setcycle 68 bigram_freq ""
+	setcycle 68 concreteness ""
+	setcycle 68 correct_response "[nonword_response]"
+	setcycle 68 freq 0
+	setcycle 68 group 0
+	setcycle 68 initial charge
+	setcycle 68 letters ""
+	setcycle 68 phonemes ""
+	setcycle 68 pos ""
+	setcycle 68 syllables ""
+	setcycle 68 trailing prured
+	setcycle 68 w_nw n
+	setcycle 69 bigram_freq ""
+	setcycle 69 concreteness ""
+	setcycle 69 correct_response "[nonword_response]"
+	setcycle 69 freq 0
+	setcycle 69 group 0
+	setcycle 69 initial down
+	setcycle 69 letters ""
+	setcycle 69 phonemes ""
+	setcycle 69 pos ""
+	setcycle 69 syllables ""
+	setcycle 69 trailing pusts
+	setcycle 69 w_nw n
+	setcycle 70 bigram_freq ""
+	setcycle 70 concreteness ""
+	setcycle 70 correct_response "[nonword_response]"
+	setcycle 70 freq 0
+	setcycle 70 group 0
+	setcycle 70 initial early
+	setcycle 70 letters ""
+	setcycle 70 phonemes ""
+	setcycle 70 pos ""
+	setcycle 70 syllables ""
+	setcycle 70 trailing rhaubed
+	setcycle 70 w_nw n
+	setcycle 71 bigram_freq ""
+	setcycle 71 concreteness ""
+	setcycle 71 correct_response "[nonword_response]"
+	setcycle 71 freq 0
+	setcycle 71 group 0
+	setcycle 71 initial also
+	setcycle 71 letters ""
+	setcycle 71 phonemes ""
+	setcycle 71 pos ""
+	setcycle 71 syllables ""
+	setcycle 71 trailing rhumbs
+	setcycle 71 w_nw n
+	setcycle 72 bigram_freq ""
+	setcycle 72 concreteness ""
+	setcycle 72 correct_response "[nonword_response]"
+	setcycle 72 freq 0
+	setcycle 72 group 0
+	setcycle 72 initial john
+	setcycle 72 letters ""
+	setcycle 72 phonemes ""
+	setcycle 72 pos ""
+	setcycle 72 syllables ""
+	setcycle 72 trailing roathe
+	setcycle 72 w_nw n
+	setcycle 73 bigram_freq ""
+	setcycle 73 concreteness ""
+	setcycle 73 correct_response "[nonword_response]"
+	setcycle 73 freq 0
+	setcycle 73 group 0
+	setcycle 73 initial taught
+	setcycle 73 letters ""
+	setcycle 73 phonemes ""
+	setcycle 73 pos ""
+	setcycle 73 syllables ""
+	setcycle 73 trailing rop
+	setcycle 73 w_nw n
+	setcycle 74 bigram_freq ""
+	setcycle 74 concreteness ""
+	setcycle 74 correct_response "[nonword_response]"
+	setcycle 74 freq 0
+	setcycle 74 group 0
+	setcycle 74 initial young
+	setcycle 74 letters ""
+	setcycle 74 phonemes ""
+	setcycle 74 pos ""
+	setcycle 74 syllables ""
+	setcycle 74 trailing scradds
+	setcycle 74 w_nw n
+	setcycle 75 bigram_freq ""
+	setcycle 75 concreteness ""
+	setcycle 75 correct_response "[nonword_response]"
+	setcycle 75 freq 0
+	setcycle 75 group 0
+	setcycle 75 initial range
+	setcycle 75 letters ""
+	setcycle 75 phonemes ""
+	setcycle 75 pos ""
+	setcycle 75 syllables ""
+	setcycle 75 trailing scradge
+	setcycle 75 w_nw n
+	setcycle 76 bigram_freq ""
+	setcycle 76 concreteness ""
+	setcycle 76 correct_response "[nonword_response]"
+	setcycle 76 freq 0
+	setcycle 76 group 0
+	setcycle 76 initial other
+	setcycle 76 letters ""
+	setcycle 76 phonemes ""
+	setcycle 76 pos ""
+	setcycle 76 syllables ""
+	setcycle 76 trailing scrarb
+	setcycle 76 w_nw n
+	setcycle 77 bigram_freq ""
+	setcycle 77 concreteness ""
+	setcycle 77 correct_response "[nonword_response]"
+	setcycle 77 freq 0
+	setcycle 77 group 0
+	setcycle 77 initial within
+	setcycle 77 letters ""
+	setcycle 77 phonemes ""
+	setcycle 77 pos ""
+	setcycle 77 syllables ""
+	setcycle 77 trailing screalt
+	setcycle 77 w_nw n
+	setcycle 78 bigram_freq ""
+	setcycle 78 concreteness ""
+	setcycle 78 correct_response "[nonword_response]"
+	setcycle 78 freq 0
+	setcycle 78 group 0
+	setcycle 78 initial least
+	setcycle 78 letters ""
+	setcycle 78 phonemes ""
+	setcycle 78 pos ""
+	setcycle 78 syllables ""
+	setcycle 78 trailing screins
+	setcycle 78 w_nw n
+	setcycle 79 bigram_freq ""
+	setcycle 79 concreteness ""
+	setcycle 79 correct_response "[nonword_response]"
+	setcycle 79 freq 0
+	setcycle 79 group 0
+	setcycle 79 initial month
+	setcycle 79 letters ""
+	setcycle 79 phonemes ""
+	setcycle 79 pos ""
+	setcycle 79 syllables ""
+	setcycle 79 trailing scrorms
+	setcycle 79 w_nw n
+	setcycle 80 bigram_freq ""
+	setcycle 80 concreteness ""
+	setcycle 80 correct_response "[nonword_response]"
+	setcycle 80 freq 0
+	setcycle 80 group 0
+	setcycle 80 initial under
+	setcycle 80 letters ""
+	setcycle 80 phonemes ""
+	setcycle 80 pos ""
+	setcycle 80 syllables ""
+	setcycle 80 trailing scudge
+	setcycle 80 w_nw n
+	setcycle 81 bigram_freq ""
+	setcycle 81 concreteness ""
+	setcycle 81 correct_response "[nonword_response]"
+	setcycle 81 freq 0
+	setcycle 81 group 0
+	setcycle 81 initial less
+	setcycle 81 letters ""
+	setcycle 81 phonemes ""
+	setcycle 81 pos ""
+	setcycle 81 syllables ""
+	setcycle 81 trailing scurked
+	setcycle 81 w_nw n
+	setcycle 82 bigram_freq ""
+	setcycle 82 concreteness ""
+	setcycle 82 correct_response "[nonword_response]"
+	setcycle 82 freq 0
+	setcycle 82 group 0
+	setcycle 82 initial attack
+	setcycle 82 letters ""
+	setcycle 82 phonemes ""
+	setcycle 82 pos ""
+	setcycle 82 syllables ""
+	setcycle 82 trailing scynch
+	setcycle 82 w_nw n
+	setcycle 83 bigram_freq ""
+	setcycle 83 concreteness ""
+	setcycle 83 correct_response "[nonword_response]"
+	setcycle 83 freq 0
+	setcycle 83 group 0
+	setcycle 83 initial courts
+	setcycle 83 letters ""
+	setcycle 83 phonemes ""
+	setcycle 83 pos ""
+	setcycle 83 syllables ""
+	setcycle 83 trailing shourned
+	setcycle 83 w_nw n
+	setcycle 84 bigram_freq ""
+	setcycle 84 concreteness ""
+	setcycle 84 correct_response "[nonword_response]"
+	setcycle 84 freq 0
+	setcycle 84 group 0
+	setcycle 84 initial should
+	setcycle 84 letters ""
+	setcycle 84 phonemes ""
+	setcycle 84 pos ""
+	setcycle 84 syllables ""
+	setcycle 84 trailing shreb
+	setcycle 84 w_nw n
+	setcycle 85 bigram_freq ""
+	setcycle 85 concreteness ""
+	setcycle 85 correct_response "[nonword_response]"
+	setcycle 85 freq 0
+	setcycle 85 group 0
+	setcycle 85 initial floor
+	setcycle 85 letters ""
+	setcycle 85 phonemes ""
+	setcycle 85 pos ""
+	setcycle 85 syllables ""
+	setcycle 85 trailing shreche
+	setcycle 85 w_nw n
+	setcycle 86 bigram_freq ""
+	setcycle 86 concreteness ""
+	setcycle 86 correct_response "[nonword_response]"
+	setcycle 86 freq 0
+	setcycle 86 group 0
+	setcycle 86 initial near
+	setcycle 86 letters ""
+	setcycle 86 phonemes ""
+	setcycle 86 pos ""
+	setcycle 86 syllables ""
+	setcycle 86 trailing shrinds
+	setcycle 86 w_nw n
+	setcycle 87 bigram_freq ""
+	setcycle 87 concreteness ""
+	setcycle 87 correct_response "[nonword_response]"
+	setcycle 87 freq 0
+	setcycle 87 group 0
+	setcycle 87 initial growth
+	setcycle 87 letters ""
+	setcycle 87 phonemes ""
+	setcycle 87 pos ""
+	setcycle 87 syllables ""
+	setcycle 87 trailing shroaked
+	setcycle 87 w_nw n
+	setcycle 88 bigram_freq ""
+	setcycle 88 concreteness ""
+	setcycle 88 correct_response "[nonword_response]"
+	setcycle 88 freq 0
+	setcycle 88 group 0
+	setcycle 88 initial wise
+	setcycle 88 letters ""
+	setcycle 88 phonemes ""
+	setcycle 88 pos ""
+	setcycle 88 syllables ""
+	setcycle 88 trailing shroons
+	setcycle 88 w_nw n
+	setcycle 89 bigram_freq ""
+	setcycle 89 concreteness ""
+	setcycle 89 correct_response "[nonword_response]"
+	setcycle 89 freq 0
+	setcycle 89 group 0
+	setcycle 89 initial leaves
+	setcycle 89 letters ""
+	setcycle 89 phonemes ""
+	setcycle 89 pos ""
+	setcycle 89 syllables ""
+	setcycle 89 trailing shround
+	setcycle 89 w_nw n
+	run trial_sequence_2
+
+define loop block_loop_3
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence_3
+	set description "A single block of trials"
+	set cycles 90
+	set continuous no
+	set column_order "initial;trailing;concreteness;pos;syllables;phonemes;letters;freq;bigram_freq;w_nw;group;correct_response"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 bigram_freq 0
+	setcycle 0 concreteness 4.53
+	setcycle 0 correct_response "[word_response]"
+	setcycle 0 freq 12.53
+	setcycle 0 group 1
+	setcycle 0 initial partner
+	setcycle 0 letters 5
+	setcycle 0 phonemes 4
+	setcycle 0 pos Noun
+	setcycle 0 syllables 2
+	setcycle 0 trailing bowel
+	setcycle 0 w_nw w
+	setcycle 1 bigram_freq 11
+	setcycle 1 concreteness 4.53
+	setcycle 1 correct_response "[word_response]"
+	setcycle 1 freq 12.53
+	setcycle 1 group 2
+	setcycle 1 initial normal
+	setcycle 1 letters 5
+	setcycle 1 phonemes 4
+	setcycle 1 pos Noun
+	setcycle 1 syllables 2
+	setcycle 1 trailing bowel
+	setcycle 1 w_nw w
+	setcycle 2 bigram_freq 198
+	setcycle 2 concreteness 4.53
+	setcycle 2 correct_response "[word_response]"
+	setcycle 2 freq 12.53
+	setcycle 2 group 3
+	setcycle 2 initial small
+	setcycle 2 letters 5
+	setcycle 2 phonemes 4
+	setcycle 2 pos Noun
+	setcycle 2 syllables 2
+	setcycle 2 trailing bowel
+	setcycle 2 w_nw w
+	setcycle 3 bigram_freq 0
+	setcycle 3 concreteness 4.92
+	setcycle 3 correct_response "[word_response]"
+	setcycle 3 freq 37.7
+	setcycle 3 group 1
+	setcycle 3 initial crouch
+	setcycle 3 letters 5
+	setcycle 3 phonemes 4
+	setcycle 3 pos Noun
+	setcycle 3 syllables 1
+	setcycle 3 trailing bread
+	setcycle 3 w_nw w
+	setcycle 4 bigram_freq 10
+	setcycle 4 concreteness 4.92
+	setcycle 4 correct_response "[word_response]"
+	setcycle 4 freq 37.7
+	setcycle 4 group 2
+	setcycle 4 initial eating
+	setcycle 4 letters 5
+	setcycle 4 phonemes 4
+	setcycle 4 pos Noun
+	setcycle 4 syllables 1
+	setcycle 4 trailing bread
+	setcycle 4 w_nw w
+	setcycle 5 bigram_freq 112
+	setcycle 5 concreteness 4.92
+	setcycle 5 correct_response "[word_response]"
+	setcycle 5 freq 37.7
+	setcycle 5 group 3
+	setcycle 5 initial some
+	setcycle 5 letters 5
+	setcycle 5 phonemes 4
+	setcycle 5 pos Noun
+	setcycle 5 syllables 1
+	setcycle 5 trailing bread
+	setcycle 5 w_nw w
+	setcycle 6 bigram_freq 0
+	setcycle 6 concreteness 3.78
+	setcycle 6 correct_response "[word_response]"
+	setcycle 6 freq 10.45
+	setcycle 6 group 1
+	setcycle 6 initial firm
+	setcycle 6 letters 7
+	setcycle 6 phonemes 5
+	setcycle 6 pos Noun
+	setcycle 6 syllables 2
+	setcycle 6 trailing cleaner
+	setcycle 6 w_nw w
+	setcycle 7 bigram_freq 11
+	setcycle 7 concreteness 3.78
+	setcycle 7 correct_response "[word_response]"
+	setcycle 7 freq 10.45
+	setcycle 7 group 2
+	setcycle 7 initial acid
+	setcycle 7 letters 7
+	setcycle 7 phonemes 5
+	setcycle 7 pos Noun
+	setcycle 7 syllables 2
+	setcycle 7 trailing cleaner
+	setcycle 7 w_nw w
+	setcycle 8 bigram_freq 164
+	setcycle 8 concreteness 3.78
+	setcycle 8 correct_response "[word_response]"
+	setcycle 8 freq 10.45
+	setcycle 8 group 3
+	setcycle 8 initial vacuum
+	setcycle 8 letters 7
+	setcycle 8 phonemes 5
+	setcycle 8 pos Noun
+	setcycle 8 syllables 2
+	setcycle 8 trailing cleaner
+	setcycle 8 w_nw w
+	setcycle 9 bigram_freq 0
+	setcycle 9 concreteness 4.79
+	setcycle 9 correct_response "[word_response]"
+	setcycle 9 freq 94.43
+	setcycle 9 group 1
+	setcycle 9 initial corn
+	setcycle 9 letters 8
+	setcycle 9 phonemes 4
+	setcycle 9 pos Noun
+	setcycle 9 syllables 2
+	setcycle 9 trailing daughter
+	setcycle 9 w_nw w
+	setcycle 10 bigram_freq 10
+	setcycle 10 concreteness 4.79
+	setcycle 10 correct_response "[word_response]"
+	setcycle 10 freq 94.43
+	setcycle 10 group 2
+	setcycle 10 initial wife
+	setcycle 10 letters 8
+	setcycle 10 phonemes 4
+	setcycle 10 pos Noun
+	setcycle 10 syllables 2
+	setcycle 10 trailing daughter
+	setcycle 10 w_nw w
+	setcycle 11 bigram_freq 111
+	setcycle 11 concreteness 4.79
+	setcycle 11 correct_response "[word_response]"
+	setcycle 11 freq 94.43
+	setcycle 11 group 3
+	setcycle 11 initial eldest
+	setcycle 11 letters 8
+	setcycle 11 phonemes 4
+	setcycle 11 pos Noun
+	setcycle 11 syllables 2
+	setcycle 11 trailing daughter
+	setcycle 11 w_nw w
+	setcycle 12 bigram_freq 0
+	setcycle 12 concreteness 4.85
+	setcycle 12 correct_response "[word_response]"
+	setcycle 12 freq 16.24
+	setcycle 12 group 1
+	setcycle 12 initial outer
+	setcycle 12 letters 4
+	setcycle 12 phonemes 4
+	setcycle 12 pos Noun
+	setcycle 12 syllables 1
+	setcycle 12 trailing disc
+	setcycle 12 w_nw w
+	setcycle 13 bigram_freq 13
+	setcycle 13 concreteness 4.85
+	setcycle 13 correct_response "[word_response]"
+	setcycle 13 freq 16.24
+	setcycle 13 group 2
+	setcycle 13 initial facial
+	setcycle 13 letters 4
+	setcycle 13 phonemes 4
+	setcycle 13 pos Noun
+	setcycle 13 syllables 1
+	setcycle 13 trailing disc
+	setcycle 13 w_nw w
+	setcycle 14 bigram_freq 130
+	setcycle 14 concreteness 4.85
+	setcycle 14 correct_response "[word_response]"
+	setcycle 14 freq 16.24
+	setcycle 14 group 3
+	setcycle 14 initial compact
+	setcycle 14 letters 4
+	setcycle 14 phonemes 4
+	setcycle 14 pos Noun
+	setcycle 14 syllables 1
+	setcycle 14 trailing disc
+	setcycle 14 w_nw w
+	setcycle 15 bigram_freq 0
+	setcycle 15 concreteness 3.78
+	setcycle 15 correct_response "[word_response]"
+	setcycle 15 freq 164.65
+	setcycle 15 group 1
+	setcycle 15 initial hover
+	setcycle 15 letters 4
+	setcycle 15 phonemes 4
+	setcycle 15 pos Noun
+	setcycle 15 syllables 1
+	setcycle 15 trailing club
+	setcycle 15 w_nw w
+	setcycle 16 bigram_freq 10
+	setcycle 16 concreteness 3.78
+	setcycle 16 correct_response "[word_response]"
+	setcycle 16 freq 164.65
+	setcycle 16 group 2
+	setcycle 16 initial biggest
+	setcycle 16 letters 4
+	setcycle 16 phonemes 4
+	setcycle 16 pos Noun
+	setcycle 16 syllables 1
+	setcycle 16 trailing club
+	setcycle 16 w_nw w
+	setcycle 17 bigram_freq 388
+	setcycle 17 concreteness 3.78
+	setcycle 17 correct_response "[word_response]"
+	setcycle 17 freq 164.65
+	setcycle 17 group 3
+	setcycle 17 initial golf
+	setcycle 17 letters 4
+	setcycle 17 phonemes 4
+	setcycle 17 pos Noun
+	setcycle 17 syllables 1
+	setcycle 17 trailing club
+	setcycle 17 w_nw w
+	setcycle 18 bigram_freq 0
+	setcycle 18 concreteness 4.86
+	setcycle 18 correct_response "[word_response]"
+	setcycle 18 freq 50.12
+	setcycle 18 group 1
+	setcycle 18 initial mouse
+	setcycle 18 letters 6
+	setcycle 18 phonemes 5
+	setcycle 18 pos Noun
+	setcycle 18 syllables 2
+	setcycle 18 trailing engine
+	setcycle 18 w_nw w
+	setcycle 19 bigram_freq 10
+	setcycle 19 concreteness 4.86
+	setcycle 19 correct_response "[word_response]"
+	setcycle 19 freq 50.12
+	setcycle 19 group 2
+	setcycle 19 initial port
+	setcycle 19 letters 6
+	setcycle 19 phonemes 5
+	setcycle 19 pos Noun
+	setcycle 19 syllables 2
+	setcycle 19 trailing engine
+	setcycle 19 w_nw w
+	setcycle 20 bigram_freq 152
+	setcycle 20 concreteness 4.86
+	setcycle 20 correct_response "[word_response]"
+	setcycle 20 freq 50.12
+	setcycle 20 group 3
+	setcycle 20 initial steam
+	setcycle 20 letters 6
+	setcycle 20 phonemes 5
+	setcycle 20 pos Noun
+	setcycle 20 syllables 2
+	setcycle 20 trailing engine
+	setcycle 20 w_nw w
+	setcycle 21 bigram_freq 0
+	setcycle 21 concreteness 1.33
+	setcycle 21 correct_response "[word_response]"
+	setcycle 21 freq 325.94
+	setcycle 21 group 1
+	setcycle 21 initial anxiety
+	setcycle 21 letters 6
+	setcycle 21 phonemes 4
+	setcycle 21 pos Adverb
+	setcycle 21 syllables 2
+	setcycle 21 trailing enough
+	setcycle 21 w_nw w
+	setcycle 22 bigram_freq 10
+	setcycle 22 concreteness 1.33
+	setcycle 22 correct_response "[word_response]"
+	setcycle 22 freq 325.94
+	setcycle 22 group 2
+	setcycle 22 initial humble
+	setcycle 22 letters 6
+	setcycle 22 phonemes 4
+	setcycle 22 pos Adverb
+	setcycle 22 syllables 2
+	setcycle 22 trailing enough
+	setcycle 22 w_nw w
+	setcycle 23 bigram_freq 164
+	setcycle 23 concreteness 1.33
+	setcycle 23 correct_response "[word_response]"
+	setcycle 23 freq 325.94
+	setcycle 23 group 3
+	setcycle 23 initial soon
+	setcycle 23 letters 6
+	setcycle 23 phonemes 4
+	setcycle 23 pos Adverb
+	setcycle 23 syllables 2
+	setcycle 23 trailing enough
+	setcycle 23 w_nw w
+	setcycle 24 bigram_freq 0
+	setcycle 24 concreteness 4.07
+	setcycle 24 correct_response "[word_response]"
+	setcycle 24 freq 146.37
+	setcycle 24 group 1
+	setcycle 24 initial resign
+	setcycle 24 letters 5
+	setcycle 24 phonemes 4
+	setcycle 24 pos Adjective
+	setcycle 24 syllables 1
+	setcycle 24 trailing green
+	setcycle 24 w_nw w
+	setcycle 25 bigram_freq 10
+	setcycle 25 concreteness 4.07
+	setcycle 25 correct_response "[word_response]"
+	setcycle 25 freq 146.37
+	setcycle 25 group 2
+	setcycle 25 initial glossy
+	setcycle 25 letters 5
+	setcycle 25 phonemes 4
+	setcycle 25 pos Adjective
+	setcycle 25 syllables 1
+	setcycle 25 trailing green
+	setcycle 25 w_nw w
+	setcycle 26 bigram_freq 133
+	setcycle 26 concreteness 4.07
+	setcycle 26 correct_response "[word_response]"
+	setcycle 26 freq 146.37
+	setcycle 26 group 3
+	setcycle 26 initial thrush
+	setcycle 26 letters 5
+	setcycle 26 phonemes 4
+	setcycle 26 pos Adjective
+	setcycle 26 syllables 1
+	setcycle 26 trailing green
+	setcycle 26 w_nw w
+	setcycle 27 bigram_freq 0
+	setcycle 27 concreteness 3.39
+	setcycle 27 correct_response "[word_response]"
+	setcycle 27 freq 402.74
+	setcycle 27 group 1
+	setcycle 27 initial herd
+	setcycle 27 letters 5
+	setcycle 27 phonemes 4
+	setcycle 27 pos Noun
+	setcycle 27 syllables 1
+	setcycle 27 trailing point
+	setcycle 27 w_nw w
+	setcycle 28 bigram_freq 11
+	setcycle 28 concreteness 3.39
+	setcycle 28 correct_response "[word_response]"
+	setcycle 28 freq 402.74
+	setcycle 28 group 2
+	setcycle 28 initial rightly
+	setcycle 28 letters 5
+	setcycle 28 phonemes 4
+	setcycle 28 pos Noun
+	setcycle 28 syllables 1
+	setcycle 28 trailing point
+	setcycle 28 w_nw w
+	setcycle 29 bigram_freq 163
+	setcycle 29 concreteness 3.39
+	setcycle 29 correct_response "[word_response]"
+	setcycle 29 freq 402.74
+	setcycle 29 group 3
+	setcycle 29 initial vantage
+	setcycle 29 letters 5
+	setcycle 29 phonemes 4
+	setcycle 29 pos Noun
+	setcycle 29 syllables 1
+	setcycle 29 trailing point
+	setcycle 29 w_nw w
+	setcycle 30 bigram_freq 0
+	setcycle 30 concreteness 3.92
+	setcycle 30 correct_response "[word_response]"
+	setcycle 30 freq 622.56
+	setcycle 30 group 1
+	setcycle 30 initial install
+	setcycle 30 letters 3
+	setcycle 30 phonemes 2
+	setcycle 30 pos Noun
+	setcycle 30 syllables 1
+	setcycle 30 trailing day
+	setcycle 30 w_nw w
+	setcycle 31 bigram_freq 10
+	setcycle 31 concreteness 3.92
+	setcycle 31 correct_response "[word_response]"
+	setcycle 31 freq 622.56
+	setcycle 31 group 2
+	setcycle 31 initial aids
+	setcycle 31 letters 3
+	setcycle 31 phonemes 2
+	setcycle 31 pos Noun
+	setcycle 31 syllables 1
+	setcycle 31 trailing day
+	setcycle 31 w_nw w
+	setcycle 32 bigram_freq 2260
+	setcycle 32 concreteness 3.92
+	setcycle 32 correct_response "[word_response]"
+	setcycle 32 freq 622.56
+	setcycle 32 group 3
+	setcycle 32 initial next
+	setcycle 32 letters 3
+	setcycle 32 phonemes 2
+	setcycle 32 pos Noun
+	setcycle 32 syllables 1
+	setcycle 32 trailing day
+	setcycle 32 w_nw w
+	setcycle 33 bigram_freq 0
+	setcycle 33 concreteness 4.26
+	setcycle 33 correct_response "[word_response]"
+	setcycle 33 freq 152.98
+	setcycle 33 group 1
+	setcycle 33 initial virtue
+	setcycle 33 letters 5
+	setcycle 33 phonemes 4
+	setcycle 33 pos Noun
+	setcycle 33 syllables 1
+	setcycle 33 trailing field
+	setcycle 33 w_nw w
+	setcycle 34 bigram_freq 11
+	setcycle 34 concreteness 4.26
+	setcycle 34 correct_response "[word_response]"
+	setcycle 34 freq 152.98
+	setcycle 34 group 2
+	setcycle 34 initial nearby
+	setcycle 34 letters 5
+	setcycle 34 phonemes 4
+	setcycle 34 pos Noun
+	setcycle 34 syllables 1
+	setcycle 34 trailing field
+	setcycle 34 w_nw w
+	setcycle 35 bigram_freq 144
+	setcycle 35 concreteness 4.26
+	setcycle 35 correct_response "[word_response]"
+	setcycle 35 freq 152.98
+	setcycle 35 group 3
+	setcycle 35 initial display
+	setcycle 35 letters 5
+	setcycle 35 phonemes 4
+	setcycle 35 pos Noun
+	setcycle 35 syllables 1
+	setcycle 35 trailing field
+	setcycle 35 w_nw w
+	setcycle 36 bigram_freq 0
+	setcycle 36 concreteness 4.97
+	setcycle 36 correct_response "[word_response]"
+	setcycle 36 freq 144.53
+	setcycle 36 group 1
+	setcycle 36 initial poem
+	setcycle 36 letters 4
+	setcycle 36 phonemes 3
+	setcycle 36 pos Noun
+	setcycle 36 syllables 1
+	setcycle 36 trailing hair
+	setcycle 36 w_nw w
+	setcycle 37 bigram_freq 11
+	setcycle 37 concreteness 4.97
+	setcycle 37 correct_response "[word_response]"
+	setcycle 37 freq 144.53
+	setcycle 37 group 2
+	setcycle 37 initial silky
+	setcycle 37 letters 4
+	setcycle 37 phonemes 3
+	setcycle 37 pos Noun
+	setcycle 37 syllables 1
+	setcycle 37 trailing hair
+	setcycle 37 w_nw w
+	setcycle 38 bigram_freq 122
+	setcycle 38 concreteness 4.97
+	setcycle 38 correct_response "[word_response]"
+	setcycle 38 freq 144.53
+	setcycle 38 group 3
+	setcycle 38 initial blonde
+	setcycle 38 letters 4
+	setcycle 38 phonemes 3
+	setcycle 38 pos Noun
+	setcycle 38 syllables 1
+	setcycle 38 trailing hair
+	setcycle 38 w_nw w
+	setcycle 39 bigram_freq 0
+	setcycle 39 concreteness 2.3
+	setcycle 39 correct_response "[word_response]"
+	setcycle 39 freq 1634.7
+	setcycle 39 group 1
+	setcycle 39 initial cold
+	setcycle 39 letters 4
+	setcycle 39 phonemes 4
+	setcycle 39 pos Preposition
+	setcycle 39 syllables 2
+	setcycle 39 trailing into
+	setcycle 39 w_nw w
+	setcycle 40 bigram_freq 10
+	setcycle 40 concreteness 2.3
+	setcycle 40 correct_response "[word_response]"
+	setcycle 40 freq 1634.7
+	setcycle 40 group 2
+	setcycle 40 initial arch
+	setcycle 40 letters 4
+	setcycle 40 phonemes 4
+	setcycle 40 pos Preposition
+	setcycle 40 syllables 2
+	setcycle 40 trailing into
+	setcycle 40 w_nw w
+	setcycle 41 bigram_freq 724
+	setcycle 41 concreteness 2.3
+	setcycle 41 correct_response "[word_response]"
+	setcycle 41 freq 1634.7
+	setcycle 41 group 3
+	setcycle 41 initial insight
+	setcycle 41 letters 4
+	setcycle 41 phonemes 4
+	setcycle 41 pos Preposition
+	setcycle 41 syllables 2
+	setcycle 41 trailing into
+	setcycle 41 w_nw w
+	setcycle 42 bigram_freq 0
+	setcycle 42 concreteness 3.73
+	setcycle 42 correct_response "[word_response]"
+	setcycle 42 freq 205.26
+	setcycle 42 group 1
+	setcycle 42 initial bay
+	setcycle 42 letters 5
+	setcycle 42 phonemes 3
+	setcycle 42 pos Noun
+	setcycle 42 syllables 1
+	setcycle 42 trailing death
+	setcycle 42 w_nw w
+	setcycle 43 bigram_freq 10
+	setcycle 43 concreteness 3.73
+	setcycle 43 correct_response "[word_response]"
+	setcycle 43 freq 205.26
+	setcycle 43 group 2
+	setcycle 43 initial bring
+	setcycle 43 letters 5
+	setcycle 43 phonemes 3
+	setcycle 43 pos Noun
+	setcycle 43 syllables 1
+	setcycle 43 trailing death
+	setcycle 43 w_nw w
+	setcycle 44 bigram_freq 175
+	setcycle 44 concreteness 3.73
+	setcycle 44 correct_response "[word_response]"
+	setcycle 44 freq 205.26
+	setcycle 44 group 3
+	setcycle 44 initial sudden
+	setcycle 44 letters 5
+	setcycle 44 phonemes 3
+	setcycle 44 pos Noun
+	setcycle 44 syllables 1
+	setcycle 44 trailing death
+	setcycle 44 w_nw w
+	setcycle 45 bigram_freq ""
+	setcycle 45 concreteness ""
+	setcycle 45 correct_response "[nonword_response]"
+	setcycle 45 freq 0
+	setcycle 45 group 0
+	setcycle 45 initial bridge
+	setcycle 45 letters ""
+	setcycle 45 phonemes ""
+	setcycle 45 pos ""
+	setcycle 45 syllables ""
+	setcycle 45 trailing shrumped
+	setcycle 45 w_nw n
+	setcycle 46 bigram_freq ""
+	setcycle 46 concreteness ""
+	setcycle 46 correct_response "[nonword_response]"
+	setcycle 46 freq 0
+	setcycle 46 group 0
+	setcycle 46 initial first
+	setcycle 46 letters ""
+	setcycle 46 phonemes ""
+	setcycle 46 pos ""
+	setcycle 46 syllables ""
+	setcycle 46 trailing skomb
+	setcycle 46 w_nw n
+	setcycle 47 bigram_freq ""
+	setcycle 47 concreteness ""
+	setcycle 47 correct_response "[nonword_response]"
+	setcycle 47 freq 0
+	setcycle 47 group 0
+	setcycle 47 initial record
+	setcycle 47 letters ""
+	setcycle 47 phonemes ""
+	setcycle 47 pos ""
+	setcycle 47 syllables ""
+	setcycle 47 trailing skurfed
+	setcycle 47 w_nw n
+	setcycle 48 bigram_freq ""
+	setcycle 48 concreteness ""
+	setcycle 48 correct_response "[nonword_response]"
+	setcycle 48 freq 0
+	setcycle 48 group 0
+	setcycle 48 initial park
+	setcycle 48 letters ""
+	setcycle 48 phonemes ""
+	setcycle 48 pos ""
+	setcycle 48 syllables ""
+	setcycle 48 trailing slauced
+	setcycle 48 w_nw n
+	setcycle 49 bigram_freq ""
+	setcycle 49 concreteness ""
+	setcycle 49 correct_response "[nonword_response]"
+	setcycle 49 freq 0
+	setcycle 49 group 0
+	setcycle 49 initial half
+	setcycle 49 letters ""
+	setcycle 49 phonemes ""
+	setcycle 49 pos ""
+	setcycle 49 syllables ""
+	setcycle 49 trailing slex
+	setcycle 49 w_nw n
+	setcycle 50 bigram_freq ""
+	setcycle 50 concreteness ""
+	setcycle 50 correct_response "[nonword_response]"
+	setcycle 50 freq 0
+	setcycle 50 group 0
+	setcycle 50 initial caps
+	setcycle 50 letters ""
+	setcycle 50 phonemes ""
+	setcycle 50 pos ""
+	setcycle 50 syllables ""
+	setcycle 50 trailing slorbs
+	setcycle 50 w_nw n
+	setcycle 51 bigram_freq ""
+	setcycle 51 concreteness ""
+	setcycle 51 correct_response "[nonword_response]"
+	setcycle 51 freq 0
+	setcycle 51 group 0
+	setcycle 51 initial group
+	setcycle 51 letters ""
+	setcycle 51 phonemes ""
+	setcycle 51 pos ""
+	setcycle 51 syllables ""
+	setcycle 51 trailing slurds
+	setcycle 51 w_nw n
+	setcycle 52 bigram_freq ""
+	setcycle 52 concreteness ""
+	setcycle 52 correct_response "[nonword_response]"
+	setcycle 52 freq 0
+	setcycle 52 group 0
+	setcycle 52 initial value
+	setcycle 52 letters ""
+	setcycle 52 phonemes ""
+	setcycle 52 pos ""
+	setcycle 52 syllables ""
+	setcycle 52 trailing smimp
+	setcycle 52 w_nw n
+	setcycle 53 bigram_freq ""
+	setcycle 53 concreteness ""
+	setcycle 53 correct_response "[nonword_response]"
+	setcycle 53 freq 0
+	setcycle 53 group 0
+	setcycle 53 initial carry
+	setcycle 53 letters ""
+	setcycle 53 phonemes ""
+	setcycle 53 pos ""
+	setcycle 53 syllables ""
+	setcycle 53 trailing sminge
+	setcycle 53 w_nw n
+	setcycle 54 bigram_freq ""
+	setcycle 54 concreteness ""
+	setcycle 54 correct_response "[nonword_response]"
+	setcycle 54 freq 0
+	setcycle 54 group 0
+	setcycle 54 initial around
+	setcycle 54 letters ""
+	setcycle 54 phonemes ""
+	setcycle 54 pos ""
+	setcycle 54 syllables ""
+	setcycle 54 trailing snompt
+	setcycle 54 w_nw n
+	setcycle 55 bigram_freq ""
+	setcycle 55 concreteness ""
+	setcycle 55 correct_response "[nonword_response]"
+	setcycle 55 freq 0
+	setcycle 55 group 0
+	setcycle 55 initial monde
+	setcycle 55 letters ""
+	setcycle 55 phonemes ""
+	setcycle 55 pos ""
+	setcycle 55 syllables ""
+	setcycle 55 trailing snurfs
+	setcycle 55 w_nw n
+	setcycle 56 bigram_freq ""
+	setcycle 56 concreteness ""
+	setcycle 56 correct_response "[nonword_response]"
+	setcycle 56 freq 0
+	setcycle 56 group 0
+	setcycle 56 initial oxford
+	setcycle 56 letters ""
+	setcycle 56 phonemes ""
+	setcycle 56 pos ""
+	setcycle 56 syllables ""
+	setcycle 56 trailing sobes
+	setcycle 56 w_nw n
+	setcycle 57 bigram_freq ""
+	setcycle 57 concreteness ""
+	setcycle 57 correct_response "[nonword_response]"
+	setcycle 57 freq 0
+	setcycle 57 group 0
+	setcycle 57 initial slit
+	setcycle 57 letters ""
+	setcycle 57 phonemes ""
+	setcycle 57 pos ""
+	setcycle 57 syllables ""
+	setcycle 57 trailing soys
+	setcycle 57 w_nw n
+	setcycle 58 bigram_freq ""
+	setcycle 58 concreteness ""
+	setcycle 58 correct_response "[nonword_response]"
+	setcycle 58 freq 0
+	setcycle 58 group 0
+	setcycle 58 initial where
+	setcycle 58 letters ""
+	setcycle 58 phonemes ""
+	setcycle 58 pos ""
+	setcycle 58 syllables ""
+	setcycle 58 trailing speefs
+	setcycle 58 w_nw n
+	setcycle 59 bigram_freq ""
+	setcycle 59 concreteness ""
+	setcycle 59 correct_response "[nonword_response]"
+	setcycle 59 freq 0
+	setcycle 59 group 0
+	setcycle 59 initial nearly
+	setcycle 59 letters ""
+	setcycle 59 phonemes ""
+	setcycle 59 pos ""
+	setcycle 59 syllables ""
+	setcycle 59 trailing spilch
+	setcycle 59 w_nw n
+	setcycle 60 bigram_freq ""
+	setcycle 60 concreteness ""
+	setcycle 60 correct_response "[nonword_response]"
+	setcycle 60 freq 0
+	setcycle 60 group 0
+	setcycle 60 initial have
+	setcycle 60 letters ""
+	setcycle 60 phonemes ""
+	setcycle 60 pos ""
+	setcycle 60 syllables ""
+	setcycle 60 trailing spimped
+	setcycle 60 w_nw n
+	setcycle 61 bigram_freq ""
+	setcycle 61 concreteness ""
+	setcycle 61 correct_response "[nonword_response]"
+	setcycle 61 freq 0
+	setcycle 61 group 0
+	setcycle 61 initial dice
+	setcycle 61 letters ""
+	setcycle 61 phonemes ""
+	setcycle 61 pos ""
+	setcycle 61 syllables ""
+	setcycle 61 trailing spirped
+	setcycle 61 w_nw n
+	setcycle 62 bigram_freq ""
+	setcycle 62 concreteness ""
+	setcycle 62 correct_response "[nonword_response]"
+	setcycle 62 freq 0
+	setcycle 62 group 0
+	setcycle 62 initial ready
+	setcycle 62 letters ""
+	setcycle 62 phonemes ""
+	setcycle 62 pos ""
+	setcycle 62 syllables ""
+	setcycle 62 trailing splique
+	setcycle 62 w_nw n
+	setcycle 63 bigram_freq ""
+	setcycle 63 concreteness ""
+	setcycle 63 correct_response "[nonword_response]"
+	setcycle 63 freq 0
+	setcycle 63 group 0
+	setcycle 63 initial strike
+	setcycle 63 letters ""
+	setcycle 63 phonemes ""
+	setcycle 63 pos ""
+	setcycle 63 syllables ""
+	setcycle 63 trailing spluys
+	setcycle 63 w_nw n
+	setcycle 64 bigram_freq ""
+	setcycle 64 concreteness ""
+	setcycle 64 correct_response "[nonword_response]"
+	setcycle 64 freq 0
+	setcycle 64 group 0
+	setcycle 64 initial plus
+	setcycle 64 letters ""
+	setcycle 64 phonemes ""
+	setcycle 64 pos ""
+	setcycle 64 syllables ""
+	setcycle 64 trailing spooth
+	setcycle 64 w_nw n
+	setcycle 65 bigram_freq ""
+	setcycle 65 concreteness ""
+	setcycle 65 correct_response "[nonword_response]"
+	setcycle 65 freq 0
+	setcycle 65 group 0
+	setcycle 65 initial rose
+	setcycle 65 letters ""
+	setcycle 65 phonemes ""
+	setcycle 65 pos ""
+	setcycle 65 syllables ""
+	setcycle 65 trailing spourds
+	setcycle 65 w_nw n
+	setcycle 66 bigram_freq ""
+	setcycle 66 concreteness ""
+	setcycle 66 correct_response "[nonword_response]"
+	setcycle 66 freq 0
+	setcycle 66 group 0
+	setcycle 66 initial allow
+	setcycle 66 letters ""
+	setcycle 66 phonemes ""
+	setcycle 66 pos ""
+	setcycle 66 syllables ""
+	setcycle 66 trailing spregged
+	setcycle 66 w_nw n
+	setcycle 67 bigram_freq ""
+	setcycle 67 concreteness ""
+	setcycle 67 correct_response "[nonword_response]"
+	setcycle 67 freq 0
+	setcycle 67 group 0
+	setcycle 67 initial normal
+	setcycle 67 letters ""
+	setcycle 67 phonemes ""
+	setcycle 67 pos ""
+	setcycle 67 syllables ""
+	setcycle 67 trailing sprempt
+	setcycle 67 w_nw n
+	setcycle 68 bigram_freq ""
+	setcycle 68 concreteness ""
+	setcycle 68 correct_response "[nonword_response]"
+	setcycle 68 freq 0
+	setcycle 68 group 0
+	setcycle 68 initial read
+	setcycle 68 letters ""
+	setcycle 68 phonemes ""
+	setcycle 68 pos ""
+	setcycle 68 syllables ""
+	setcycle 68 trailing sprugged
+	setcycle 68 w_nw n
+	setcycle 69 bigram_freq ""
+	setcycle 69 concreteness ""
+	setcycle 69 correct_response "[nonword_response]"
+	setcycle 69 freq 0
+	setcycle 69 group 0
+	setcycle 69 initial shall
+	setcycle 69 letters ""
+	setcycle 69 phonemes ""
+	setcycle 69 pos ""
+	setcycle 69 syllables ""
+	setcycle 69 trailing staim
+	setcycle 69 w_nw n
+	setcycle 70 bigram_freq ""
+	setcycle 70 concreteness ""
+	setcycle 70 correct_response "[nonword_response]"
+	setcycle 70 freq 0
+	setcycle 70 group 0
+	setcycle 70 initial node
+	setcycle 70 letters ""
+	setcycle 70 phonemes ""
+	setcycle 70 pos ""
+	setcycle 70 syllables ""
+	setcycle 70 trailing stalps
+	setcycle 70 w_nw n
+	setcycle 71 bigram_freq ""
+	setcycle 71 concreteness ""
+	setcycle 71 correct_response "[nonword_response]"
+	setcycle 71 freq 0
+	setcycle 71 group 0
+	setcycle 71 initial post
+	setcycle 71 letters ""
+	setcycle 71 phonemes ""
+	setcycle 71 pos ""
+	setcycle 71 syllables ""
+	setcycle 71 trailing steaves
+	setcycle 71 w_nw n
+	setcycle 72 bigram_freq ""
+	setcycle 72 concreteness ""
+	setcycle 72 correct_response "[nonword_response]"
+	setcycle 72 freq 0
+	setcycle 72 group 0
+	setcycle 72 initial shorts
+	setcycle 72 letters ""
+	setcycle 72 phonemes ""
+	setcycle 72 pos ""
+	setcycle 72 syllables ""
+	setcycle 72 trailing stilch
+	setcycle 72 w_nw n
+	setcycle 73 bigram_freq ""
+	setcycle 73 concreteness ""
+	setcycle 73 correct_response "[nonword_response]"
+	setcycle 73 freq 0
+	setcycle 73 group 0
+	setcycle 73 initial make
+	setcycle 73 letters ""
+	setcycle 73 phonemes ""
+	setcycle 73 pos ""
+	setcycle 73 syllables ""
+	setcycle 73 trailing stonks
+	setcycle 73 w_nw n
+	setcycle 74 bigram_freq ""
+	setcycle 74 concreteness ""
+	setcycle 74 correct_response "[nonword_response]"
+	setcycle 74 freq 0
+	setcycle 74 group 0
+	setcycle 74 initial found
+	setcycle 74 letters ""
+	setcycle 74 phonemes ""
+	setcycle 74 pos ""
+	setcycle 74 syllables ""
+	setcycle 74 trailing strease
+	setcycle 74 w_nw n
+	setcycle 75 bigram_freq ""
+	setcycle 75 concreteness ""
+	setcycle 75 correct_response "[nonword_response]"
+	setcycle 75 freq 0
+	setcycle 75 group 0
+	setcycle 75 initial reject
+	setcycle 75 letters ""
+	setcycle 75 phonemes ""
+	setcycle 75 pos ""
+	setcycle 75 syllables ""
+	setcycle 75 trailing streeved
+	setcycle 75 w_nw n
+	setcycle 76 bigram_freq ""
+	setcycle 76 concreteness ""
+	setcycle 76 correct_response "[nonword_response]"
+	setcycle 76 freq 0
+	setcycle 76 group 0
+	setcycle 76 initial blyth
+	setcycle 76 letters ""
+	setcycle 76 phonemes ""
+	setcycle 76 pos ""
+	setcycle 76 syllables ""
+	setcycle 76 trailing strepths
+	setcycle 76 w_nw n
+	setcycle 77 bigram_freq ""
+	setcycle 77 concreteness ""
+	setcycle 77 correct_response "[nonword_response]"
+	setcycle 77 freq 0
+	setcycle 77 group 0
+	setcycle 77 initial isaiah
+	setcycle 77 letters ""
+	setcycle 77 phonemes ""
+	setcycle 77 pos ""
+	setcycle 77 syllables ""
+	setcycle 77 trailing strirst
+	setcycle 77 w_nw n
+	setcycle 78 bigram_freq ""
+	setcycle 78 concreteness ""
+	setcycle 78 correct_response "[nonword_response]"
+	setcycle 78 freq 0
+	setcycle 78 group 0
+	setcycle 78 initial cancer
+	setcycle 78 letters ""
+	setcycle 78 phonemes ""
+	setcycle 78 pos ""
+	setcycle 78 syllables ""
+	setcycle 78 trailing stroobs
+	setcycle 78 w_nw n
+	setcycle 79 bigram_freq ""
+	setcycle 79 concreteness ""
+	setcycle 79 correct_response "[nonword_response]"
+	setcycle 79 freq 0
+	setcycle 79 group 0
+	setcycle 79 initial above
+	setcycle 79 letters ""
+	setcycle 79 phonemes ""
+	setcycle 79 pos ""
+	setcycle 79 syllables ""
+	setcycle 79 trailing sturse
+	setcycle 79 w_nw n
+	setcycle 80 bigram_freq ""
+	setcycle 80 concreteness ""
+	setcycle 80 correct_response "[nonword_response]"
+	setcycle 80 freq 0
+	setcycle 80 group 0
+	setcycle 80 initial punch
+	setcycle 80 letters ""
+	setcycle 80 phonemes ""
+	setcycle 80 pos ""
+	setcycle 80 syllables ""
+	setcycle 80 trailing swaught
+	setcycle 80 w_nw n
+	setcycle 81 bigram_freq ""
+	setcycle 81 concreteness ""
+	setcycle 81 correct_response "[nonword_response]"
+	setcycle 81 freq 0
+	setcycle 81 group 0
+	setcycle 81 initial marker
+	setcycle 81 letters ""
+	setcycle 81 phonemes ""
+	setcycle 81 pos ""
+	setcycle 81 syllables ""
+	setcycle 81 trailing tarb
+	setcycle 81 w_nw n
+	setcycle 82 bigram_freq ""
+	setcycle 82 concreteness ""
+	setcycle 82 correct_response "[nonword_response]"
+	setcycle 82 freq 0
+	setcycle 82 group 0
+	setcycle 82 initial saline
+	setcycle 82 letters ""
+	setcycle 82 phonemes ""
+	setcycle 82 pos ""
+	setcycle 82 syllables ""
+	setcycle 82 trailing thalse
+	setcycle 82 w_nw n
+	setcycle 83 bigram_freq ""
+	setcycle 83 concreteness ""
+	setcycle 83 correct_response "[nonword_response]"
+	setcycle 83 freq 0
+	setcycle 83 group 0
+	setcycle 83 initial bottom
+	setcycle 83 letters ""
+	setcycle 83 phonemes ""
+	setcycle 83 pos ""
+	setcycle 83 syllables ""
+	setcycle 83 trailing theep
+	setcycle 83 w_nw n
+	setcycle 84 bigram_freq ""
+	setcycle 84 concreteness ""
+	setcycle 84 correct_response "[nonword_response]"
+	setcycle 84 freq 0
+	setcycle 84 group 0
+	setcycle 84 initial race
+	setcycle 84 letters ""
+	setcycle 84 phonemes ""
+	setcycle 84 pos ""
+	setcycle 84 syllables ""
+	setcycle 84 trailing thork
+	setcycle 84 w_nw n
+	setcycle 85 bigram_freq ""
+	setcycle 85 concreteness ""
+	setcycle 85 correct_response "[nonword_response]"
+	setcycle 85 freq 0
+	setcycle 85 group 0
+	setcycle 85 initial angle
+	setcycle 85 letters ""
+	setcycle 85 phonemes ""
+	setcycle 85 pos ""
+	setcycle 85 syllables ""
+	setcycle 85 trailing thraced
+	setcycle 85 w_nw n
+	setcycle 86 bigram_freq ""
+	setcycle 86 concreteness ""
+	setcycle 86 correct_response "[nonword_response]"
+	setcycle 86 freq 0
+	setcycle 86 group 0
+	setcycle 86 initial nodes
+	setcycle 86 letters ""
+	setcycle 86 phonemes ""
+	setcycle 86 pos ""
+	setcycle 86 syllables ""
+	setcycle 86 trailing thrulb
+	setcycle 86 w_nw n
+	setcycle 87 bigram_freq ""
+	setcycle 87 concreteness ""
+	setcycle 87 correct_response "[nonword_response]"
+	setcycle 87 freq 0
+	setcycle 87 group 0
+	setcycle 87 initial that
+	setcycle 87 letters ""
+	setcycle 87 phonemes ""
+	setcycle 87 pos ""
+	setcycle 87 syllables ""
+	setcycle 87 trailing thrus
+	setcycle 87 w_nw n
+	setcycle 88 bigram_freq ""
+	setcycle 88 concreteness ""
+	setcycle 88 correct_response "[nonword_response]"
+	setcycle 88 freq 0
+	setcycle 88 group 0
+	setcycle 88 initial number
+	setcycle 88 letters ""
+	setcycle 88 phonemes ""
+	setcycle 88 pos ""
+	setcycle 88 syllables ""
+	setcycle 88 trailing thryp
+	setcycle 88 w_nw n
+	setcycle 89 bigram_freq ""
+	setcycle 89 concreteness ""
+	setcycle 89 correct_response "[nonword_response]"
+	setcycle 89 freq 0
+	setcycle 89 group 0
+	setcycle 89 initial cent
+	setcycle 89 letters ""
+	setcycle 89 phonemes ""
+	setcycle 89 pos ""
+	setcycle 89 syllables ""
+	setcycle 89 trailing thuv
+	setcycle 89 w_nw n
+	run trial_sequence_3
+
+define loop block_loop_4
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence_4
+	set description "A single block of trials"
+	set cycles 90
+	set continuous no
+	set column_order "initial;trailing;concreteness;pos;syllables;phonemes;letters;freq;bigram_freq;w_nw;group;correct_response"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 bigram_freq 0
+	setcycle 0 concreteness 2.08
+	setcycle 0 correct_response "[word_response]"
+	setcycle 0 freq 35.49
+	setcycle 0 group 1
+	setcycle 0 initial flex
+	setcycle 0 letters 7
+	setcycle 0 phonemes 7
+	setcycle 0 pos Noun
+	setcycle 0 syllables 2
+	setcycle 0 trailing consent
+	setcycle 0 w_nw w
+	setcycle 1 bigram_freq 10
+	setcycle 1 concreteness 2.08
+	setcycle 1 correct_response "[word_response]"
+	setcycle 1 freq 35.49
+	setcycle 1 group 2
+	setcycle 1 initial formal
+	setcycle 1 letters 7
+	setcycle 1 phonemes 7
+	setcycle 1 pos Noun
+	setcycle 1 syllables 2
+	setcycle 1 trailing consent
+	setcycle 1 w_nw w
+	setcycle 2 bigram_freq 149
+	setcycle 2 concreteness 2.08
+	setcycle 2 correct_response "[word_response]"
+	setcycle 2 freq 35.49
+	setcycle 2 group 3
+	setcycle 2 initial informed
+	setcycle 2 letters 7
+	setcycle 2 phonemes 7
+	setcycle 2 pos Noun
+	setcycle 2 syllables 2
+	setcycle 2 trailing consent
+	setcycle 2 w_nw w
+	setcycle 3 bigram_freq 0
+	setcycle 3 concreteness 4.07
+	setcycle 3 correct_response "[word_response]"
+	setcycle 3 freq 124.94
+	setcycle 3 group 1
+	setcycle 3 initial eyebrow
+	setcycle 3 letters 4
+	setcycle 3 phonemes 3
+	setcycle 3 pos Adjective
+	setcycle 3 syllables 1
+	setcycle 3 trailing dead
+	setcycle 3 w_nw w
+	setcycle 4 bigram_freq 10
+	setcycle 4 concreteness 4.07
+	setcycle 4 correct_response "[word_response]"
+	setcycle 4 freq 124.94
+	setcycle 4 group 2
+	setcycle 4 initial stop
+	setcycle 4 letters 4
+	setcycle 4 phonemes 3
+	setcycle 4 pos Adjective
+	setcycle 4 syllables 1
+	setcycle 4 trailing dead
+	setcycle 4 w_nw w
+	setcycle 5 bigram_freq 551
+	setcycle 5 concreteness 4.07
+	setcycle 5 correct_response "[word_response]"
+	setcycle 5 freq 124.94
+	setcycle 5 group 3
+	setcycle 5 initial shot
+	setcycle 5 letters 4
+	setcycle 5 phonemes 3
+	setcycle 5 pos Adjective
+	setcycle 5 syllables 1
+	setcycle 5 trailing dead
+	setcycle 5 w_nw w
+	setcycle 6 bigram_freq 0
+	setcycle 6 concreteness 4.71
+	setcycle 6 correct_response "[word_response]"
+	setcycle 6 freq 53.82
+	setcycle 6 group 1
+	setcycle 6 initial symptom
+	setcycle 6 letters 6
+	setcycle 6 phonemes 5
+	setcycle 6 pos Noun
+	setcycle 6 syllables 2
+	setcycle 6 trailing driver
+	setcycle 6 w_nw w
+	setcycle 7 bigram_freq 12
+	setcycle 7 concreteness 4.71
+	setcycle 7 correct_response "[word_response]"
+	setcycle 7 freq 53.82
+	setcycle 7 group 2
+	setcycle 7 initial rally
+	setcycle 7 letters 6
+	setcycle 7 phonemes 5
+	setcycle 7 pos Noun
+	setcycle 7 syllables 2
+	setcycle 7 trailing driver
+	setcycle 7 w_nw w
+	setcycle 8 bigram_freq 260
+	setcycle 8 concreteness 4.71
+	setcycle 8 correct_response "[word_response]"
+	setcycle 8 freq 53.82
+	setcycle 8 group 3
+	setcycle 8 initial taxi
+	setcycle 8 letters 6
+	setcycle 8 phonemes 5
+	setcycle 8 pos Noun
+	setcycle 8 syllables 2
+	setcycle 8 trailing driver
+	setcycle 8 w_nw w
+	setcycle 9 bigram_freq 0
+	setcycle 9 concreteness 2.46
+	setcycle 9 correct_response "[word_response]"
+	setcycle 9 freq 1322.76
+	setcycle 9 group 1
+	setcycle 9 initial praise
+	setcycle 9 letters 4
+	setcycle 9 phonemes 3
+	setcycle 9 pos Adverb
+	setcycle 9 syllables 2
+	setcycle 9 trailing over
+	setcycle 9 w_nw w
+	setcycle 10 bigram_freq 10
+	setcycle 10 concreteness 2.46
+	setcycle 10 correct_response "[word_response]"
+	setcycle 10 freq 1322.76
+	setcycle 10 group 2
+	setcycle 10 initial basin
+	setcycle 10 letters 4
+	setcycle 10 phonemes 3
+	setcycle 10 pos Adverb
+	setcycle 10 syllables 2
+	setcycle 10 trailing over
+	setcycle 10 w_nw w
+	setcycle 11 bigram_freq 92
+	setcycle 11 concreteness 2.46
+	setcycle 11 correct_response "[word_response]"
+	setcycle 11 freq 1322.76
+	setcycle 11 group 3
+	setcycle 11 initial scattered
+	setcycle 11 letters 4
+	setcycle 11 phonemes 3
+	setcycle 11 pos Adverb
+	setcycle 11 syllables 2
+	setcycle 11 trailing over
+	setcycle 11 w_nw w
+	setcycle 12 bigram_freq 0
+	setcycle 12 concreteness 2.57
+	setcycle 12 correct_response "[word_response]"
+	setcycle 12 freq 270.33
+	setcycle 12 group 1
+	setcycle 12 initial menu
+	setcycle 12 letters 3
+	setcycle 12 phonemes 2
+	setcycle 12 pos Noun
+	setcycle 12 syllables 1
+	setcycle 12 trailing law
+	setcycle 12 w_nw w
+	setcycle 13 bigram_freq 14
+	setcycle 13 concreteness 2.57
+	setcycle 13 correct_response "[word_response]"
+	setcycle 13 freq 270.33
+	setcycle 13 group 2
+	setcycle 13 initial libel
+	setcycle 13 letters 3
+	setcycle 13 phonemes 2
+	setcycle 13 pos Noun
+	setcycle 13 syllables 1
+	setcycle 13 trailing law
+	setcycle 13 w_nw w
+	setcycle 14 bigram_freq 197
+	setcycle 14 concreteness 2.57
+	setcycle 14 correct_response "[word_response]"
+	setcycle 14 freq 270.33
+	setcycle 14 group 3
+	setcycle 14 initial martial
+	setcycle 14 letters 3
+	setcycle 14 phonemes 2
+	setcycle 14 pos Noun
+	setcycle 14 syllables 1
+	setcycle 14 trailing law
+	setcycle 14 w_nw w
+	setcycle 15 bigram_freq 0
+	setcycle 15 concreteness 2.89
+	setcycle 15 correct_response "[word_response]"
+	setcycle 15 freq 44.09
+	setcycle 15 group 1
+	setcycle 15 initial oral
+	setcycle 15 letters 3
+	setcycle 15 phonemes 3
+	setcycle 15 pos Noun
+	setcycle 15 syllables 1
+	setcycle 15 trailing sum
+	setcycle 15 w_nw w
+	setcycle 16 bigram_freq 17
+	setcycle 16 concreteness 2.89
+	setcycle 16 correct_response "[word_response]"
+	setcycle 16 freq 44.09
+	setcycle 16 group 2
+	setcycle 16 initial tidy
+	setcycle 16 letters 3
+	setcycle 16 phonemes 3
+	setcycle 16 pos Noun
+	setcycle 16 syllables 1
+	setcycle 16 trailing sum
+	setcycle 16 w_nw w
+	setcycle 17 bigram_freq 411
+	setcycle 17 concreteness 2.89
+	setcycle 17 correct_response "[word_response]"
+	setcycle 17 freq 44.09
+	setcycle 17 group 3
+	setcycle 17 initial lump
+	setcycle 17 letters 3
+	setcycle 17 phonemes 3
+	setcycle 17 pos Noun
+	setcycle 17 syllables 1
+	setcycle 17 trailing sum
+	setcycle 17 w_nw w
+	setcycle 18 bigram_freq 0
+	setcycle 18 concreteness 1.54
+	setcycle 18 correct_response "[word_response]"
+	setcycle 18 freq 11153.82
+	setcycle 18 group 1
+	setcycle 18 initial unity
+	setcycle 18 letters 4
+	setcycle 18 phonemes 3
+	setcycle 18 pos Determiner
+	setcycle 18 syllables 1
+	setcycle 18 trailing that
+	setcycle 18 w_nw w
+	setcycle 19 bigram_freq 10
+	setcycle 19 concreteness 1.54
+	setcycle 19 correct_response "[word_response]"
+	setcycle 19 freq 11153.82
+	setcycle 19 group 2
+	setcycle 19 initial collar
+	setcycle 19 letters 4
+	setcycle 19 phonemes 3
+	setcycle 19 pos Determiner
+	setcycle 19 syllables 1
+	setcycle 19 trailing that
+	setcycle 19 w_nw w
+	setcycle 20 bigram_freq 720
+	setcycle 20 concreteness 1.54
+	setcycle 20 correct_response "[word_response]"
+	setcycle 20 freq 11153.82
+	setcycle 20 group 3
+	setcycle 20 initial notion
+	setcycle 20 letters 4
+	setcycle 20 phonemes 3
+	setcycle 20 pos Determiner
+	setcycle 20 syllables 1
+	setcycle 20 trailing that
+	setcycle 20 w_nw w
+	setcycle 21 bigram_freq 0
+	setcycle 21 concreteness 2
+	setcycle 21 correct_response "[word_response]"
+	setcycle 21 freq 6520.5
+	setcycle 21 group 1
+	setcycle 21 initial compact
+	setcycle 21 letters 4
+	setcycle 21 phonemes 3
+	setcycle 21 pos Preposition
+	setcycle 21 syllables 1
+	setcycle 21 trailing with
+	setcycle 21 w_nw w
+	setcycle 22 bigram_freq 10
+	setcycle 22 concreteness 2
+	setcycle 22 correct_response "[word_response]"
+	setcycle 22 freq 6520.5
+	setcycle 22 group 2
+	setcycle 22 initial abound
+	setcycle 22 letters 4
+	setcycle 22 phonemes 3
+	setcycle 22 pos Preposition
+	setcycle 22 syllables 1
+	setcycle 22 trailing with
+	setcycle 22 w_nw w
+	setcycle 23 bigram_freq 1160
+	setcycle 23 concreteness 2
+	setcycle 23 correct_response "[word_response]"
+	setcycle 23 freq 6520.5
+	setcycle 23 group 3
+	setcycle 23 initial comply
+	setcycle 23 letters 4
+	setcycle 23 phonemes 3
+	setcycle 23 pos Preposition
+	setcycle 23 syllables 1
+	setcycle 23 trailing with
+	setcycle 23 w_nw w
+	setcycle 24 bigram_freq 0
+	setcycle 24 concreteness 2.72
+	setcycle 24 correct_response "[word_response]"
+	setcycle 24 freq 54.15
+	setcycle 24 group 1
+	setcycle 24 initial diamond
+	setcycle 24 letters 4
+	setcycle 24 phonemes 3
+	setcycle 24 pos Noun
+	setcycle 24 syllables 1
+	setcycle 24 trailing debt
+	setcycle 24 w_nw w
+	setcycle 25 bigram_freq 10
+	setcycle 25 concreteness 2.72
+	setcycle 25 correct_response "[word_response]"
+	setcycle 25 freq 54.15
+	setcycle 25 group 2
+	setcycle 25 initial dollar
+	setcycle 25 letters 4
+	setcycle 25 phonemes 3
+	setcycle 25 pos Noun
+	setcycle 25 syllables 1
+	setcycle 25 trailing debt
+	setcycle 25 w_nw w
+	setcycle 26 bigram_freq 227
+	setcycle 26 concreteness 2.72
+	setcycle 26 correct_response "[word_response]"
+	setcycle 26 freq 54.15
+	setcycle 26 group 3
+	setcycle 26 initial foreign
+	setcycle 26 letters 4
+	setcycle 26 phonemes 3
+	setcycle 26 pos Noun
+	setcycle 26 syllables 1
+	setcycle 26 trailing debt
+	setcycle 26 w_nw w
+	setcycle 27 bigram_freq 0
+	setcycle 27 concreteness 2.07
+	setcycle 27 correct_response "[word_response]"
+	setcycle 27 freq 58.98
+	setcycle 27 group 1
+	setcycle 27 initial census
+	setcycle 27 letters 7
+	setcycle 27 phonemes 6
+	setcycle 27 pos Verb
+	setcycle 27 syllables 2
+	setcycle 27 trailing defined
+	setcycle 27 w_nw w
+	setcycle 28 bigram_freq 10
+	setcycle 28 concreteness 2.07
+	setcycle 28 correct_response "[word_response]"
+	setcycle 28 freq 58.98
+	setcycle 28 group 2
+	setcycle 28 initial thus
+	setcycle 28 letters 7
+	setcycle 28 phonemes 6
+	setcycle 28 pos Verb
+	setcycle 28 syllables 2
+	setcycle 28 trailing defined
+	setcycle 28 w_nw w
+	setcycle 29 bigram_freq 363
+	setcycle 29 concreteness 2.07
+	setcycle 29 correct_response "[word_response]"
+	setcycle 29 freq 58.98
+	setcycle 29 group 3
+	setcycle 29 initial clearly
+	setcycle 29 letters 7
+	setcycle 29 phonemes 6
+	setcycle 29 pos Verb
+	setcycle 29 syllables 2
+	setcycle 29 trailing defined
+	setcycle 29 w_nw w
+	setcycle 30 bigram_freq 0
+	setcycle 30 concreteness 1.63
+	setcycle 30 correct_response "[word_response]"
+	setcycle 30 freq 8517.23
+	setcycle 30 group 1
+	setcycle 30 initial corner
+	setcycle 30 letters 3
+	setcycle 30 phonemes 3
+	setcycle 30 pos Preposition
+	setcycle 30 syllables 1
+	setcycle 30 trailing for
+	setcycle 30 w_nw w
+	setcycle 31 bigram_freq 10
+	setcycle 31 concreteness 1.63
+	setcycle 31 correct_response "[word_response]"
+	setcycle 31 freq 8517.23
+	setcycle 31 group 2
+	setcycle 31 initial accent
+	setcycle 31 letters 3
+	setcycle 31 phonemes 3
+	setcycle 31 pos Preposition
+	setcycle 31 syllables 1
+	setcycle 31 trailing for
+	setcycle 31 w_nw w
+	setcycle 32 bigram_freq 2263
+	setcycle 32 concreteness 1.63
+	setcycle 32 correct_response "[word_response]"
+	setcycle 32 freq 8517.23
+	setcycle 32 group 3
+	setcycle 32 initial ready
+	setcycle 32 letters 3
+	setcycle 32 phonemes 3
+	setcycle 32 pos Preposition
+	setcycle 32 syllables 1
+	setcycle 32 trailing for
+	setcycle 32 w_nw w
+	setcycle 33 bigram_freq 0
+	setcycle 33 concreteness 1.84
+	setcycle 33 correct_response "[word_response]"
+	setcycle 33 freq 4135.35
+	setcycle 33 group 1
+	setcycle 33 initial radical
+	setcycle 33 letters 4
+	setcycle 33 phonemes 3
+	setcycle 33 pos Preposition
+	setcycle 33 syllables 1
+	setcycle 33 trailing from
+	setcycle 33 w_nw w
+	setcycle 34 bigram_freq 10
+	setcycle 34 concreteness 1.84
+	setcycle 34 correct_response "[word_response]"
+	setcycle 34 freq 4135.35
+	setcycle 34 group 2
+	setcycle 34 initial blanket
+	setcycle 34 letters 4
+	setcycle 34 phonemes 3
+	setcycle 34 pos Preposition
+	setcycle 34 syllables 1
+	setcycle 34 trailing from
+	setcycle 34 w_nw w
+	setcycle 35 bigram_freq 1277
+	setcycle 35 concreteness 1.84
+	setcycle 35 correct_response "[word_response]"
+	setcycle 35 freq 4135.35
+	setcycle 35 group 3
+	setcycle 35 initial ranging
+	setcycle 35 letters 4
+	setcycle 35 phonemes 4
+	setcycle 35 pos Preposition
+	setcycle 35 syllables 1
+	setcycle 35 trailing from
+	setcycle 35 w_nw w
+	setcycle 36 bigram_freq 0
+	setcycle 36 concreteness 2.08
+	setcycle 36 correct_response "[word_response]"
+	setcycle 36 freq 4627.77
+	setcycle 36 group 1
+	setcycle 36 initial rotate
+	setcycle 36 letters 3
+	setcycle 36 phonemes 3
+	setcycle 36 pos Not
+	setcycle 36 syllables 1
+	setcycle 36 trailing not
+	setcycle 36 w_nw w
+	setcycle 37 bigram_freq 17
+	setcycle 37 concreteness 2.08
+	setcycle 37 correct_response "[word_response]"
+	setcycle 37 freq 4627.77
+	setcycle 37 group 2
+	setcycle 37 initial plainly
+	setcycle 37 letters 3
+	setcycle 37 phonemes 3
+	setcycle 37 pos Not
+	setcycle 37 syllables 1
+	setcycle 37 trailing not
+	setcycle 37 w_nw w
+	setcycle 38 bigram_freq 134
+	setcycle 38 concreteness 2.08
+	setcycle 38 correct_response "[word_response]"
+	setcycle 38 freq 4627.77
+	setcycle 38 group 3
+	setcycle 38 initial tend
+	setcycle 38 letters 3
+	setcycle 38 phonemes 3
+	setcycle 38 pos Not
+	setcycle 38 syllables 1
+	setcycle 38 trailing not
+	setcycle 38 w_nw w
+	setcycle 39 bigram_freq 0
+	setcycle 39 concreteness 2.79
+	setcycle 39 correct_response "[word_response]"
+	setcycle 39 freq 701.66
+	setcycle 39 group 1
+	setcycle 39 initial divide
+	setcycle 39 letters 3
+	setcycle 39 phonemes 2
+	setcycle 39 pos Adverb
+	setcycle 39 syllables 1
+	setcycle 39 trailing off
+	setcycle 39 w_nw w
+	setcycle 40 bigram_freq 10
+	setcycle 40 concreteness 2.79
+	setcycle 40 correct_response "[word_response]"
+	setcycle 40 freq 701.66
+	setcycle 40 group 2
+	setcycle 40 initial helmet
+	setcycle 40 letters 3
+	setcycle 40 phonemes 2
+	setcycle 40 pos Adverb
+	setcycle 40 syllables 1
+	setcycle 40 trailing off
+	setcycle 40 w_nw w
+	setcycle 41 bigram_freq 183
+	setcycle 41 concreteness 2.79
+	setcycle 41 correct_response "[word_response]"
+	setcycle 41 freq 701.66
+	setcycle 41 group 3
+	setcycle 41 initial pissed
+	setcycle 41 letters 3
+	setcycle 41 phonemes 2
+	setcycle 41 pos Adverb
+	setcycle 41 syllables 1
+	setcycle 41 trailing off
+	setcycle 41 w_nw w
+	setcycle 42 bigram_freq 0
+	setcycle 42 concreteness 2.19
+	setcycle 42 correct_response "[word_response]"
+	setcycle 42 freq 80.8
+	setcycle 42 group 1
+	setcycle 42 initial guitar
+	setcycle 42 letters 4
+	setcycle 42 phonemes 5
+	setcycle 42 pos Noun
+	setcycle 42 syllables 2
+	setcycle 42 trailing duty
+	setcycle 42 w_nw w
+	setcycle 43 bigram_freq 10
+	setcycle 43 concreteness 2.19
+	setcycle 43 correct_response "[word_response]"
+	setcycle 43 freq 80.8
+	setcycle 43 group 2
+	setcycle 43 initial sentry
+	setcycle 43 letters 4
+	setcycle 43 phonemes 5
+	setcycle 43 pos Noun
+	setcycle 43 syllables 2
+	setcycle 43 trailing duty
+	setcycle 43 w_nw w
+	setcycle 44 bigram_freq 299
+	setcycle 44 concreteness 2.19
+	setcycle 44 correct_response "[word_response]"
+	setcycle 44 freq 80.8
+	setcycle 44 group 3
+	setcycle 44 initial stamp
+	setcycle 44 letters 4
+	setcycle 44 phonemes 5
+	setcycle 44 pos Noun
+	setcycle 44 syllables 2
+	setcycle 44 trailing duty
+	setcycle 44 w_nw w
+	setcycle 45 bigram_freq ""
+	setcycle 45 concreteness ""
+	setcycle 45 correct_response "[nonword_response]"
+	setcycle 45 freq 0
+	setcycle 45 group 0
+	setcycle 45 initial keep
+	setcycle 45 letters ""
+	setcycle 45 phonemes ""
+	setcycle 45 pos ""
+	setcycle 45 syllables ""
+	setcycle 45 trailing tisks
+	setcycle 45 w_nw n
+	setcycle 46 bigram_freq ""
+	setcycle 46 concreteness ""
+	setcycle 46 correct_response "[nonword_response]"
+	setcycle 46 freq 0
+	setcycle 46 group 0
+	setcycle 46 initial levels
+	setcycle 46 letters ""
+	setcycle 46 phonemes ""
+	setcycle 46 pos ""
+	setcycle 46 syllables ""
+	setcycle 46 trailing trat
+	setcycle 46 w_nw n
+	setcycle 47 bigram_freq ""
+	setcycle 47 concreteness ""
+	setcycle 47 correct_response "[nonword_response]"
+	setcycle 47 freq 0
+	setcycle 47 group 0
+	setcycle 47 initial brazil
+	setcycle 47 letters ""
+	setcycle 47 phonemes ""
+	setcycle 47 pos ""
+	setcycle 47 syllables ""
+	setcycle 47 trailing trebe
+	setcycle 47 w_nw n
+	setcycle 48 bigram_freq ""
+	setcycle 48 concreteness ""
+	setcycle 48 correct_response "[nonword_response]"
+	setcycle 48 freq 0
+	setcycle 48 group 0
+	setcycle 48 initial tour
+	setcycle 48 letters ""
+	setcycle 48 phonemes ""
+	setcycle 48 pos ""
+	setcycle 48 syllables ""
+	setcycle 48 trailing twarked
+	setcycle 48 w_nw n
+	setcycle 49 bigram_freq ""
+	setcycle 49 concreteness ""
+	setcycle 49 correct_response "[nonword_response]"
+	setcycle 49 freq 0
+	setcycle 49 group 0
+	setcycle 49 initial deduct
+	setcycle 49 letters ""
+	setcycle 49 phonemes ""
+	setcycle 49 pos ""
+	setcycle 49 syllables ""
+	setcycle 49 trailing twells
+	setcycle 49 w_nw n
+	setcycle 50 bigram_freq ""
+	setcycle 50 concreteness ""
+	setcycle 50 correct_response "[nonword_response]"
+	setcycle 50 freq 0
+	setcycle 50 group 0
+	setcycle 50 initial power
+	setcycle 50 letters ""
+	setcycle 50 phonemes ""
+	setcycle 50 pos ""
+	setcycle 50 syllables ""
+	setcycle 50 trailing twurped
+	setcycle 50 w_nw n
+	setcycle 51 bigram_freq ""
+	setcycle 51 concreteness ""
+	setcycle 51 correct_response "[nonword_response]"
+	setcycle 51 freq 0
+	setcycle 51 group 0
+	setcycle 51 initial scored
+	setcycle 51 letters ""
+	setcycle 51 phonemes ""
+	setcycle 51 pos ""
+	setcycle 51 syllables ""
+	setcycle 51 trailing vapse
+	setcycle 51 w_nw n
+	setcycle 52 bigram_freq ""
+	setcycle 52 concreteness ""
+	setcycle 52 correct_response "[nonword_response]"
+	setcycle 52 freq 0
+	setcycle 52 group 0
+	setcycle 52 initial than
+	setcycle 52 letters ""
+	setcycle 52 phonemes ""
+	setcycle 52 pos ""
+	setcycle 52 syllables ""
+	setcycle 52 trailing wherve
+	setcycle 52 w_nw n
+	setcycle 53 bigram_freq ""
+	setcycle 53 concreteness ""
+	setcycle 53 correct_response "[nonword_response]"
+	setcycle 53 freq 0
+	setcycle 53 group 0
+	setcycle 53 initial gain
+	setcycle 53 letters ""
+	setcycle 53 phonemes ""
+	setcycle 53 pos ""
+	setcycle 53 syllables ""
+	setcycle 53 trailing whols
+	setcycle 53 w_nw n
+	setcycle 54 bigram_freq ""
+	setcycle 54 concreteness ""
+	setcycle 54 correct_response "[nonword_response]"
+	setcycle 54 freq 0
+	setcycle 54 group 0
+	setcycle 54 initial become
+	setcycle 54 letters ""
+	setcycle 54 phonemes ""
+	setcycle 54 pos ""
+	setcycle 54 syllables ""
+	setcycle 54 trailing whuffs
+	setcycle 54 w_nw n
+	setcycle 55 bigram_freq ""
+	setcycle 55 concreteness ""
+	setcycle 55 correct_response "[nonword_response]"
+	setcycle 55 freq 0
+	setcycle 55 group 0
+	setcycle 55 initial port
+	setcycle 55 letters ""
+	setcycle 55 phonemes ""
+	setcycle 55 pos ""
+	setcycle 55 syllables ""
+	setcycle 55 trailing wofts
+	setcycle 55 w_nw n
+	setcycle 56 bigram_freq ""
+	setcycle 56 concreteness ""
+	setcycle 56 correct_response "[nonword_response]"
+	setcycle 56 freq 0
+	setcycle 56 group 0
+	setcycle 56 initial four
+	setcycle 56 letters ""
+	setcycle 56 phonemes ""
+	setcycle 56 pos ""
+	setcycle 56 syllables ""
+	setcycle 56 trailing wrikes
+	setcycle 56 w_nw n
+	setcycle 57 bigram_freq ""
+	setcycle 57 concreteness ""
+	setcycle 57 correct_response "[nonword_response]"
+	setcycle 57 freq 0
+	setcycle 57 group 0
+	setcycle 57 initial acid
+	setcycle 57 letters ""
+	setcycle 57 phonemes ""
+	setcycle 57 pos ""
+	setcycle 57 syllables ""
+	setcycle 57 trailing yean
+	setcycle 57 w_nw n
+	setcycle 58 bigram_freq ""
+	setcycle 58 concreteness ""
+	setcycle 58 correct_response "[nonword_response]"
+	setcycle 58 freq 0
+	setcycle 58 group 0
+	setcycle 58 initial buffer
+	setcycle 58 letters ""
+	setcycle 58 phonemes ""
+	setcycle 58 pos ""
+	setcycle 58 syllables ""
+	setcycle 58 trailing yiled
+	setcycle 58 w_nw n
+	setcycle 59 bigram_freq ""
+	setcycle 59 concreteness ""
+	setcycle 59 correct_response "[nonword_response]"
+	setcycle 59 freq 0
+	setcycle 59 group 0
+	setcycle 59 initial left
+	setcycle 59 letters ""
+	setcycle 59 phonemes ""
+	setcycle 59 pos ""
+	setcycle 59 syllables ""
+	setcycle 59 trailing yir
+	setcycle 59 w_nw n
+	setcycle 60 bigram_freq ""
+	setcycle 60 concreteness ""
+	setcycle 60 correct_response "[nonword_response]"
+	setcycle 60 freq 0
+	setcycle 60 group 0
+	setcycle 60 initial luke
+	setcycle 60 letters ""
+	setcycle 60 phonemes ""
+	setcycle 60 pos ""
+	setcycle 60 syllables ""
+	setcycle 60 trailing yurp
+	setcycle 60 w_nw n
+	setcycle 61 bigram_freq ""
+	setcycle 61 concreteness ""
+	setcycle 61 correct_response "[nonword_response]"
+	setcycle 61 freq 0
+	setcycle 61 group 0
+	setcycle 61 initial over
+	setcycle 61 letters ""
+	setcycle 61 phonemes ""
+	setcycle 61 pos ""
+	setcycle 61 syllables ""
+	setcycle 61 trailing zarms
+	setcycle 61 w_nw n
+	setcycle 62 bigram_freq ""
+	setcycle 62 concreteness ""
+	setcycle 62 correct_response "[nonword_response]"
+	setcycle 62 freq 0
+	setcycle 62 group 0
+	setcycle 62 initial about
+	setcycle 62 letters ""
+	setcycle 62 phonemes ""
+	setcycle 62 pos ""
+	setcycle 62 syllables ""
+	setcycle 62 trailing zawped
+	setcycle 62 w_nw n
+	setcycle 63 bigram_freq ""
+	setcycle 63 concreteness ""
+	setcycle 63 correct_response "[nonword_response]"
+	setcycle 63 freq 0
+	setcycle 63 group 0
+	setcycle 63 initial house
+	setcycle 63 letters ""
+	setcycle 63 phonemes ""
+	setcycle 63 pos ""
+	setcycle 63 syllables ""
+	setcycle 63 trailing sprimp
+	setcycle 63 w_nw n
+	setcycle 64 bigram_freq ""
+	setcycle 64 concreteness ""
+	setcycle 64 correct_response "[nonword_response]"
+	setcycle 64 freq 0
+	setcycle 64 group 0
+	setcycle 64 initial should
+	setcycle 64 letters ""
+	setcycle 64 phonemes ""
+	setcycle 64 pos ""
+	setcycle 64 syllables ""
+	setcycle 64 trailing smouns
+	setcycle 64 w_nw n
+	setcycle 65 bigram_freq ""
+	setcycle 65 concreteness ""
+	setcycle 65 correct_response "[nonword_response]"
+	setcycle 65 freq 0
+	setcycle 65 group 0
+	setcycle 65 initial into
+	setcycle 65 letters ""
+	setcycle 65 phonemes ""
+	setcycle 65 pos ""
+	setcycle 65 syllables ""
+	setcycle 65 trailing spacts
+	setcycle 65 w_nw n
+	setcycle 66 bigram_freq ""
+	setcycle 66 concreteness ""
+	setcycle 66 correct_response "[nonword_response]"
+	setcycle 66 freq 0
+	setcycle 66 group 0
+	setcycle 66 initial clothes
+	setcycle 66 letters ""
+	setcycle 66 phonemes ""
+	setcycle 66 pos ""
+	setcycle 66 syllables ""
+	setcycle 66 trailing grealt
+	setcycle 66 w_nw n
+	setcycle 67 bigram_freq ""
+	setcycle 67 concreteness ""
+	setcycle 67 correct_response "[nonword_response]"
+	setcycle 67 freq 0
+	setcycle 67 group 0
+	setcycle 67 initial headed
+	setcycle 67 letters ""
+	setcycle 67 phonemes ""
+	setcycle 67 pos ""
+	setcycle 67 syllables ""
+	setcycle 67 trailing shryme
+	setcycle 67 w_nw n
+	setcycle 68 bigram_freq ""
+	setcycle 68 concreteness ""
+	setcycle 68 correct_response "[nonword_response]"
+	setcycle 68 freq 0
+	setcycle 68 group 0
+	setcycle 68 initial came
+	setcycle 68 letters ""
+	setcycle 68 phonemes ""
+	setcycle 68 pos ""
+	setcycle 68 syllables ""
+	setcycle 68 trailing thanse
+	setcycle 68 w_nw n
+	setcycle 69 bigram_freq ""
+	setcycle 69 concreteness ""
+	setcycle 69 correct_response "[nonword_response]"
+	setcycle 69 freq 0
+	setcycle 69 group 0
+	setcycle 69 initial predict
+	setcycle 69 letters ""
+	setcycle 69 phonemes ""
+	setcycle 69 pos ""
+	setcycle 69 syllables ""
+	setcycle 69 trailing blolks
+	setcycle 69 w_nw n
+	setcycle 70 bigram_freq ""
+	setcycle 70 concreteness ""
+	setcycle 70 correct_response "[nonword_response]"
+	setcycle 70 freq 0
+	setcycle 70 group 0
+	setcycle 70 initial many
+	setcycle 70 letters ""
+	setcycle 70 phonemes ""
+	setcycle 70 pos ""
+	setcycle 70 syllables ""
+	setcycle 70 trailing scrongs
+	setcycle 70 w_nw n
+	setcycle 71 bigram_freq ""
+	setcycle 71 concreteness ""
+	setcycle 71 correct_response "[nonword_response]"
+	setcycle 71 freq 0
+	setcycle 71 group 0
+	setcycle 71 initial more
+	setcycle 71 letters ""
+	setcycle 71 phonemes ""
+	setcycle 71 pos ""
+	setcycle 71 syllables ""
+	setcycle 71 trailing phlain
+	setcycle 71 w_nw n
+	setcycle 72 bigram_freq ""
+	setcycle 72 concreteness ""
+	setcycle 72 correct_response "[nonword_response]"
+	setcycle 72 freq 0
+	setcycle 72 group 0
+	setcycle 72 initial hear
+	setcycle 72 letters ""
+	setcycle 72 phonemes ""
+	setcycle 72 pos ""
+	setcycle 72 syllables ""
+	setcycle 72 trailing ghop
+	setcycle 72 w_nw n
+	setcycle 73 bigram_freq ""
+	setcycle 73 concreteness ""
+	setcycle 73 correct_response "[nonword_response]"
+	setcycle 73 freq 0
+	setcycle 73 group 0
+	setcycle 73 initial record
+	setcycle 73 letters ""
+	setcycle 73 phonemes ""
+	setcycle 73 pos ""
+	setcycle 73 syllables ""
+	setcycle 73 trailing smats
+	setcycle 73 w_nw n
+	setcycle 74 bigram_freq ""
+	setcycle 74 concreteness ""
+	setcycle 74 correct_response "[nonword_response]"
+	setcycle 74 freq 0
+	setcycle 74 group 0
+	setcycle 74 initial once
+	setcycle 74 letters ""
+	setcycle 74 phonemes ""
+	setcycle 74 pos ""
+	setcycle 74 syllables ""
+	setcycle 74 trailing brirr
+	setcycle 74 w_nw n
+	setcycle 75 bigram_freq ""
+	setcycle 75 concreteness ""
+	setcycle 75 correct_response "[nonword_response]"
+	setcycle 75 freq 0
+	setcycle 75 group 0
+	setcycle 75 initial morning
+	setcycle 75 letters ""
+	setcycle 75 phonemes ""
+	setcycle 75 pos ""
+	setcycle 75 syllables ""
+	setcycle 75 trailing splim
+	setcycle 75 w_nw n
+	setcycle 76 bigram_freq ""
+	setcycle 76 concreteness ""
+	setcycle 76 correct_response "[nonword_response]"
+	setcycle 76 freq 0
+	setcycle 76 group 0
+	setcycle 76 initial someone
+	setcycle 76 letters ""
+	setcycle 76 phonemes ""
+	setcycle 76 pos ""
+	setcycle 76 syllables ""
+	setcycle 76 trailing caide
+	setcycle 76 w_nw n
+	setcycle 77 bigram_freq ""
+	setcycle 77 concreteness ""
+	setcycle 77 correct_response "[nonword_response]"
+	setcycle 77 freq 0
+	setcycle 77 group 0
+	setcycle 77 initial those
+	setcycle 77 letters ""
+	setcycle 77 phonemes ""
+	setcycle 77 pos ""
+	setcycle 77 syllables ""
+	setcycle 77 trailing palks
+	setcycle 77 w_nw n
+	setcycle 78 bigram_freq ""
+	setcycle 78 concreteness ""
+	setcycle 78 correct_response "[nonword_response]"
+	setcycle 78 freq 0
+	setcycle 78 group 0
+	setcycle 78 initial friend
+	setcycle 78 letters ""
+	setcycle 78 phonemes ""
+	setcycle 78 pos ""
+	setcycle 78 syllables ""
+	setcycle 78 trailing flouth
+	setcycle 78 w_nw n
+	setcycle 79 bigram_freq ""
+	setcycle 79 concreteness ""
+	setcycle 79 correct_response "[nonword_response]"
+	setcycle 79 freq 0
+	setcycle 79 group 0
+	setcycle 79 initial hereby
+	setcycle 79 letters ""
+	setcycle 79 phonemes ""
+	setcycle 79 pos ""
+	setcycle 79 syllables ""
+	setcycle 79 trailing thrinced
+	setcycle 79 w_nw n
+	setcycle 80 bigram_freq ""
+	setcycle 80 concreteness ""
+	setcycle 80 correct_response "[nonword_response]"
+	setcycle 80 freq 0
+	setcycle 80 group 0
+	setcycle 80 initial had
+	setcycle 80 letters ""
+	setcycle 80 phonemes ""
+	setcycle 80 pos ""
+	setcycle 80 syllables ""
+	setcycle 80 trailing bic
+	setcycle 80 w_nw n
+	setcycle 81 bigram_freq ""
+	setcycle 81 concreteness ""
+	setcycle 81 correct_response "[nonword_response]"
+	setcycle 81 freq 0
+	setcycle 81 group 0
+	setcycle 81 initial theory
+	setcycle 81 letters ""
+	setcycle 81 phonemes ""
+	setcycle 81 pos ""
+	setcycle 81 syllables ""
+	setcycle 81 trailing shurps
+	setcycle 81 w_nw n
+	setcycle 82 bigram_freq ""
+	setcycle 82 concreteness ""
+	setcycle 82 correct_response "[nonword_response]"
+	setcycle 82 freq 0
+	setcycle 82 group 0
+	setcycle 82 initial sex
+	setcycle 82 letters ""
+	setcycle 82 phonemes ""
+	setcycle 82 pos ""
+	setcycle 82 syllables ""
+	setcycle 82 trailing splathed
+	setcycle 82 w_nw n
+	setcycle 83 bigram_freq ""
+	setcycle 83 concreteness ""
+	setcycle 83 correct_response "[nonword_response]"
+	setcycle 83 freq 0
+	setcycle 83 group 0
+	setcycle 83 initial legal
+	setcycle 83 letters ""
+	setcycle 83 phonemes ""
+	setcycle 83 pos ""
+	setcycle 83 syllables ""
+	setcycle 83 trailing fifed
+	setcycle 83 w_nw n
+	setcycle 84 bigram_freq ""
+	setcycle 84 concreteness ""
+	setcycle 84 correct_response "[nonword_response]"
+	setcycle 84 freq 0
+	setcycle 84 group 0
+	setcycle 84 initial mask
+	setcycle 84 letters ""
+	setcycle 84 phonemes ""
+	setcycle 84 pos ""
+	setcycle 84 syllables ""
+	setcycle 84 trailing skirds
+	setcycle 84 w_nw n
+	setcycle 85 bigram_freq ""
+	setcycle 85 concreteness ""
+	setcycle 85 correct_response "[nonword_response]"
+	setcycle 85 freq 0
+	setcycle 85 group 0
+	setcycle 85 initial often
+	setcycle 85 letters ""
+	setcycle 85 phonemes ""
+	setcycle 85 pos ""
+	setcycle 85 syllables ""
+	setcycle 85 trailing drelt
+	setcycle 85 w_nw n
+	setcycle 86 bigram_freq ""
+	setcycle 86 concreteness ""
+	setcycle 86 correct_response "[nonword_response]"
+	setcycle 86 freq 0
+	setcycle 86 group 0
+	setcycle 86 initial left
+	setcycle 86 letters ""
+	setcycle 86 phonemes ""
+	setcycle 86 pos ""
+	setcycle 86 syllables ""
+	setcycle 86 trailing ceche
+	setcycle 86 w_nw n
+	setcycle 87 bigram_freq ""
+	setcycle 87 concreteness ""
+	setcycle 87 correct_response "[nonword_response]"
+	setcycle 87 freq 0
+	setcycle 87 group 0
+	setcycle 87 initial awful
+	setcycle 87 letters ""
+	setcycle 87 phonemes ""
+	setcycle 87 pos ""
+	setcycle 87 syllables ""
+	setcycle 87 trailing gwammed
+	setcycle 87 w_nw n
+	setcycle 88 bigram_freq ""
+	setcycle 88 concreteness ""
+	setcycle 88 correct_response "[nonword_response]"
+	setcycle 88 freq 0
+	setcycle 88 group 0
+	setcycle 88 initial out
+	setcycle 88 letters ""
+	setcycle 88 phonemes ""
+	setcycle 88 pos ""
+	setcycle 88 syllables ""
+	setcycle 88 trailing snaffs
+	setcycle 88 w_nw n
+	setcycle 89 bigram_freq ""
+	setcycle 89 concreteness ""
+	setcycle 89 correct_response "[nonword_response]"
+	setcycle 89 freq 0
+	setcycle 89 group 0
+	setcycle 89 initial read
+	setcycle 89 letters ""
+	setcycle 89 phonemes ""
+	setcycle 89 pos ""
+	setcycle 89 syllables ""
+	setcycle 89 trailing shisque
+	setcycle 89 w_nw n
+	run trial_sequence_4
+
+define sketchpad correct
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw textline center=1 color="#00a300" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text=Correct x=0 y=0 z_index=0
+
+define inline_script counterbalance
+	set description ""
+	set _run ""
+	___prepare__
+	if var.subject_parity == 'odd':
+		var.word_response = 'z'
+		var.nonword_response = 'm'
+	else:
+		var.word_response = 'm'
+		var.nonword_response = 'z'
+		
+	exp.set('col','green')
+	
+	if self.get('subject_nr')%24==0:
+		b1=0
+		b2=1
+		b3=2
+		b4=3
+	elif self.get('subject_nr')%24==1:
+		b1=0
+		b2=1
+		b3=3
+		b4=2
+	elif self.get('subject_nr')%24==2:
+		b1=0
+		b2=2
+		b3=1
+		b4=3
+	elif self.get('subject_nr')%24==3:
+		b1=0
+		b2=2
+		b3=3
+		b4=1
+	elif self.get('subject_nr')%24==4:
+		b1=0
+		b2=3
+		b3=1
+		b4=2
+	elif self.get('subject_nr')%24==5:
+		b1=0
+		b2=3
+		b3=2
+		b4=1
+	elif self.get('subject_nr')%24==6:
+		b1=1
+		b2=0
+		b3=3
+		b4=2
+	elif self.get('subject_nr')%24==7:
+		b1=1
+		b2=0
+		b3=2
+		b4=3
+	elif self.get('subject_nr')%24==8:
+		b1=1
+		b2=2
+		b3=3
+		b4=0
+	elif self.get('subject_nr')%24==9:
+		b1=1
+		b2=2
+		b3=0
+		b4=3
+	elif self.get('subject_nr')%24==10:
+		b1=1
+		b2=3
+		b3=2
+		b4=0
+	elif self.get('subject_nr')%24==11:
+		b1=1
+		b2=3
+		b3=0
+		b4=2
+	elif self.get('subject_nr')%24==12:
+		b1=2
+		b2=0
+		b3=1
+		b4=3
+	elif self.get('subject_nr')%24==13:
+		b1=2
+		b2=0
+		b3=3
+		b4=1
+	elif self.get('subject_nr')%24==14:
+		b1=2
+		b2=1
+		b3=0
+		b4=3
+	elif self.get('subject_nr')%24==15:
+		b1=2
+		b2=1
+		b3=3
+		b4=0
+	elif self.get('subject_nr')%24==16:
+		b1=2
+		b2=3
+		b3=0
+		b4=1
+	elif self.get('subject_nr')%24==17:
+		b1=2
+		b2=3
+		b3=1
+		b4=0
+	elif self.get('subject_nr')%24==18:
+		b1=3
+		b2=0
+		b3=2
+		b4=1
+	elif self.get('subject_nr')%24==19:
+		b1=3
+		b2=0
+		b3=1
+		b4=2
+	elif self.get('subject_nr')%24==20:
+		b1=3
+		b2=1
+		b3=0
+		b4=2
+	elif self.get('subject_nr')%24==21:
+		b1=3
+		b2=1
+		b3=2
+		b4=0
+	elif self.get('subject_nr')%24==22:
+		b1=3
+		b2=2
+		b3=0
+		b4=1
+	else:
+		b1=3
+		b2=2
+		b3=1
+		b4=0
+		
+	exp.set('b1',b1)
+	exp.set('b2',b2)
+	exp.set('b3',b3)
+	exp.set('b4',b4)
+	__end__
+
+define sketchpad end_of_practice
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="The practice phase is finished<br />The real experiment will start now<br /><br />Press any key to continue" x=0 y=0 z_index=0
+
+define sequence experiment
+	set flush_keyboard yes
+	set description ""
+	run counterbalance always
+	run instructions always
+	run prac_block_loop always
+	run end_of_practice always
+	run mainloop always
+	run new_feedback always
+	run goodbye always
+
+define sketchpad goodbye
+	set duration keypress
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="The experiment is finished<br />Thank you for participating<br /><br />Press any key to exit" x=0 y=0 z_index=0
+
+define sketchpad incorrect
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw textline center=1 color=red font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text=Incorrect x=0 y=0 z_index=0
+
+define sketchpad instructions
+	set duration keypress
+	set description ""
+	draw textline center=1 color="#000000" font_bold=no font_family=sans font_italic=no font_size=32 html=yes show_if=always text="Instructions<br /><br /><br />You will see strings of letters<br />Your task is to say whether these letters form a word or not<br /><br />Each string will be preceded briefly by a word. <br />Do not respond to this word.<br /><br />If the letters form a word, press [word_response]<br />If the letters do not form a word, press [nonword_response]<br /><br />Examples<br /><br /><span style='mono'>apple</span> is a word, so you press [word_response]<br /><span style='mono'>ipple</span> is not a word, so you press [nonword_response]<br /><br /><br />Press a key to start practice" x=0 y=0 z_index=0
+
+define keyboard_response keyboard_response
+	set timeout 1500
+	set flush yes
+	set duration keypress
+	set description "Collects keyboard responses"
+	set correct_response "[correct_response]"
+	set allowed_responses "z;m"
+
+define keyboard_response keyboard_response_1
+	set timeout 1500
+	set flush yes
+	set duration keypress
+	set description "Collects keyboard responses"
+	set correct_response "[correct_response]"
+	set allowed_responses "z;m"
+
+define keyboard_response keyboard_response_1_1
+	set timeout 1500
+	set flush yes
+	set duration keypress
+	set description "Collects keyboard responses"
+	set correct_response "[correct_response]"
+	set allowed_responses "z;m"
+
+define logger logger
+	set description "Logs experimental data"
+	set auto_log yes
+
+define logger logger_1
+	set description "Logs experimental data"
+	set auto_log no
+	log Initial
+	log IConcreteness
+	log IFrequency
+	log POS
+	log ISyllables
+	log IPhonemes
+	log IPhonNeighbour
+	log ILetters
+	log Trailing
+	log TConcreteness
+	log TFrequency
+	log TPOS
+	log TSyllables
+	log TPhonemes
+	log TPhonNeighbour
+	log TLetters
+	log BFrequency
+	log correct_response
+	log category
+	log acc
+	log accuracy
+	log correct
+	log response_time
+	log response_time_keyboard_response
+
+define logger logger_1_1
+	set description "Logs experimental data"
+	set auto_log no
+	log Initial
+	log IConcreteness
+	log IFrequency
+	log POS
+	log ISyllables
+	log IPhonemes
+	log IPhonNeighbour
+	log ILetters
+	log Trailing
+	log TConcreteness
+	log TFrequency
+	log TPOS
+	log TSyllables
+	log TPhonemes
+	log TPhonNeighbour
+	log TLetters
+	log BFrequency
+	log correct_response
+	log category
+	log acc
+	log accuracy
+	log correct
+	log response_time
+	log response_time_keyboard_response
+
+define loop mainloop
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item mainsequence
+	set description "Repeatedly runs another item"
+	set cycles 4
+	set continuous no
+	set column_order ""
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 empty_column ""
+	setcycle 1 empty_column ""
+	setcycle 2 empty_column ""
+	setcycle 3 empty_column ""
+	run mainsequence
+
+define sequence mainsequence
+	set flush_keyboard yes
+	set description "Runs a number of items in sequence"
+	run block_loop_1 "=self.get('b1')==self.get('count_mainsequence')"
+	run block_loop_2 "=self.get('b2')==self.get('count_mainsequence')"
+	run block_loop_3 "=self.get('b3')==self.get('count_mainsequence')"
+	run block_loop_4 "=self.get('b4')==self.get('count_mainsequence')"
+	run block_end always
+
+define feedback new_feedback
+	set reset_variables no
+	set duration keypress
+	set description "Provides feedback to the participant"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="Thank you for taking part.<br />Your average response time was [average_response_time]ms and<br />your overall accuracy was [accuracy]%" x=0 y=0 z_index=0
+
+define sketchpad p_fixation
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw fixdot color="#000000" show_if=always style=default x=0 y=0 z_index=0
+
+define sketchpad p_fixation_1
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color=black penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad p_fixation_1_1
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color=black penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad p_fixation_1_1_1
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color=black penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad p_fixation_1_2
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define loop prac_block_loop
+	set source_file ""
+	set source table
+	set skip 0
+	set repeat 1
+	set order random
+	set offset no
+	set item trial_sequence
+	set description ""
+	set cycles 6
+	set continuous no
+	set column_order "correct_response;target;category;prime"
+	set break_if_on_first yes
+	set break_if never
+	setcycle 0 category word
+	setcycle 0 correct_response "[word_response]"
+	setcycle 0 prime fruit
+	setcycle 0 target juice
+	setcycle 1 category nonword
+	setcycle 1 correct_response "[nonword_response]"
+	setcycle 1 prime fruit
+	setcycle 1 target dage
+	setcycle 2 category word
+	setcycle 2 correct_response "[word_response]"
+	setcycle 2 prime sheep
+	setcycle 2 target wool
+	setcycle 3 category nonword
+	setcycle 3 correct_response "[nonword_response]"
+	setcycle 3 prime farm
+	setcycle 3 target zum
+	setcycle 4 category word
+	setcycle 4 correct_response "[word_response]"
+	setcycle 4 prime parrot
+	setcycle 4 target chopper
+	setcycle 5 category nonword
+	setcycle 5 correct_response "[nonword_response]"
+	setcycle 5 prime carrot
+	setcycle 5 target flubj
+	run trial_sequence
+
+define sketchpad prime
+	set start_response_interval no
+	set duration 75
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[prime]" x=0 y=0 z_index=0
+
+define sketchpad prime_1
+	set start_response_interval no
+	set duration 75
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[initial]" x=0 y=0 z_index=0
+
+define sketchpad prime_1_1
+	set start_response_interval no
+	set duration 150
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[initial]" x=0 y=0 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad prime_1_1_1
+	set start_response_interval no
+	set duration 150
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[initial]" x=0 y=0 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad prime_1_2
+	set start_response_interval no
+	set duration 150
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[initial]" x=0 y=0 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define inline_script set_col
+	set description "Executes Python code"
+	___run__
+	if exp.get('response_keyboard_response') == exp.get('correct_response'):
+			exp.set('col','green')
+	else:
+		exp.set('col','red')
+	__end__
+	set _prepare ""
+
+define sketchpad target
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[target]" x=0 y=0 z_index=0
+
+define sketchpad target_1
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[trailing]" x=0 y=0 z_index=0
+
+define sketchpad target_1_1
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[trailing]" x=0 y=0 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad target_1_1_1
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[trailing]" x=0 y=0 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad target_1_2
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw textline center=1 color="#000000" font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[trailing]" x=0 y=0 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad target_2
+	set start_response_interval no
+	set duration 500
+	set description "Displays stimuli"
+	draw textline center=1 color=white font_bold=no font_family=mono font_italic=no font_size=32 html=yes show_if=always text="[target]" x=0 y=0 z_index=0
+	draw line color="[col]" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="[col]" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sequence trial_sequence
+	set flush_keyboard yes
+	set description ""
+	run p_fixation always
+	run prime always
+	run target always
+	run keyboard_response always
+	run correct "[correct]=1"
+	run incorrect "[correct]=0"
+
+define sequence trial_sequence_1
+	set flush_keyboard yes
+	set description "A single trial"
+	run p_fixation always
+	run prime_1 always
+	run target_1 always
+	run keyboard_response always
+	run logger always
+
+define sequence trial_sequence_2
+	set flush_keyboard yes
+	set description "A single trial"
+	run p_fixation always
+	run prime_1 always
+	run target_1 always
+	run keyboard_response always
+	run logger always
+
+define sequence trial_sequence_3
+	set flush_keyboard yes
+	set description "A single trial"
+	run p_fixation always
+	run prime_1 always
+	run target_1 always
+	run keyboard_response always
+	run logger always
+
+define sequence trial_sequence_4
+	set flush_keyboard yes
+	set description "A single trial"
+	run p_fixation always
+	run prime_1 always
+	run target_1 always
+	run keyboard_response always
+	run logger always
+
+define sketchpad w_fixation_1
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad w_fixation_1_1
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad w_fixation_1_1_1
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad w_fixation_1_2
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=-32 y2=-32 z_index=0
+	draw line color="#000000" penwidth=2 show_if=always x1=-32 x2=32 y1=32 y2=32 z_index=0
+
+define sketchpad w_fixation_2
+	set start_response_interval no
+	set duration 0
+	set description "Displays stimuli"
+	draw fixdot color="#000000" show_if=always style=default x=0 y=0 z_index=0
+
